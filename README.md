@@ -51,6 +51,14 @@ Special thanks to **Kunal Ghosh** for designing and leading the **Digital VLSI S
 
 ---
 
+### Anagha Ghosh
+**Director, VLSI System Design (VSD)**
+
+Special thanks to Anagha Ghosh for her leadership, support, and contribution towards building the VLSI System Design learning ecosystem and promoting practical semiconductor education through open-source initiatives.
+
+🔗 LinkedIn: https://www.linkedin.com/in/anagha-ghosh-4983b9358/
+
+
 ## 👨‍💻 Nickson P. Jose
 
 **Physical Design Engineer**
