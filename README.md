@@ -162,9 +162,11 @@ whose continuous efforts have made professional ASIC education accessible to eve
   https://www.youtube.com/@Efabless
 
 - FOSSI Foundation
+  
   https://www.youtube.com/@FOSSiFoundation
 
 - FOSSI Dial-Up ASIC & OpenLane usign 130 complete flow
+  
   https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L
 
 ---
