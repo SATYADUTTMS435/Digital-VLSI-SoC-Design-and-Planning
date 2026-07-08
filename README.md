@@ -1,4 +1,4 @@
-#  About the Course
+#  📖 About the Course
 
 Welcome to my documentation repository for the **Digital VLSI SoC Design and Planning** program, offered by **VLSI System Design (VSD)** as part of the **VSDSquadron** initiative. This hands-on program provides practical exposure to the complete **RTL-to-GDSII ASIC Design Flow**, enabling participants to transform a Register Transfer Level (RTL) design into a manufacturable GDSII layout using industry-standard open-source Electronic Design Automation (EDA) tools and the **SKY130 Process Design Kit (PDK)**.
 
@@ -7,7 +7,7 @@ The course emphasizes learning through **implementation, debugging, documentatio
 Rather than being just another workshop submission, this repository is intended to serve as a **complete technical reference**, containing detailed theory, implementation steps, screenshots, command explanations, report analysis, troubleshooting guides, observations, and interview-oriented insights for students, hobbyists, and VLSI enthusiasts.
 
 
-#  About VLSI System Design (VSD)
+# 🏛️ About VLSI System Design (VSD)
 
 **VLSI System Design (VSD)** is an educational platform dedicated to bridging the gap between academic learning and the semiconductor industry through project-based education and practical implementation.
 
@@ -17,7 +17,7 @@ By emphasizing practical silicon implementation rather than theory alone, VSD pr
 
 
 
-#  Repository Highlights
+# 🌟 Repository Highlights
 
 This repository contains:
 
@@ -37,11 +37,11 @@ This repository contains:
 
 
 
-#  Acknowledgements
+#  🙏 Acknowledgements
 
 This repository would not have been possible without the tremendous efforts of educators, researchers, engineers, and the open-source community dedicated to advancing semiconductor education.
 
-##  Kunal Ghosh
+## 👨‍🏫 Kunal Ghosh
 
 **Co-Founder – VLSI System Design (VSD)**
 
@@ -51,7 +51,7 @@ Special thanks to **Kunal Ghosh** for designing and leading the **Digital VLSI S
 
 ---
 
-##  Nickson P. Jose
+## 👨‍💻 Nickson P. Jose
 
 **Physical Design Engineer**
 
@@ -61,7 +61,7 @@ Special thanks to **Nickson P. Jose** for sharing practical knowledge in Digital
 
 ---
 
-##  Dr. Mohamed Shalan
+## 👨‍🔬 Dr. Mohamed Shalan
 
 **Co-Founder – Efabless**
 
@@ -71,7 +71,7 @@ Special thanks to **Dr. Mohamed Shalan** for his pioneering contributions to Ope
 
 ---
 
-##  R. Timothy Edwards
+## 👨‍🔬 R. Timothy Edwards
 
 **Chief Technology Officer – Efabless**
 
@@ -81,7 +81,7 @@ Special thanks to **R. Timothy Edwards** for his remarkable contributions to the
 
 ---
 
-##  VLSI System Design (VSD)
+## 🏢 VLSI System Design (VSD)
 
 Thank you to the entire **VLSI System Design** team for creating an exceptional learning platform that bridges academic concepts with practical semiconductor engineering.
 
@@ -97,7 +97,7 @@ Special thanks to **Efabless** for developing and maintaining OpenLANE and enabl
 
 ---
 
-##  The Open-Source Community
+## ❤️ The Open-Source Community
 
 Finally, sincere thanks to the developers and maintainers of:
 
