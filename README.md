@@ -67,7 +67,7 @@ Special thanks to **Nickson P. Jose** for sharing practical knowledge in Digital
 
 Special thanks to **Dr. Mohamed Shalan** for his pioneering contributions to OpenLANE, Efabless, and the open-source silicon ecosystem, making ASIC design accessible to students and researchers worldwide.
 
-🔗 LinkedIn: https://www.linkedin.com/in/mohamed-shalan/
+🔗 LinkedIn: https://www.linkedin.com/in/mohamed-shalan
 
 ---
 
@@ -161,8 +161,11 @@ whose continuous efforts have made professional ASIC education accessible to eve
 - Efabless  
   https://www.youtube.com/@Efabless
 
-- The OpenROAD Project  
-  https://www.youtube.com/@TheOpenROADProject
+- FOSSI Foundation
+  https://www.youtube.com/@FOSSiFoundation
+
+- FOSSI Dial-Up ASIC & OpenLane usign 130 complete flow
+  https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZCg9XpFSgEgljx6MSdm9L
 
 ---
 
