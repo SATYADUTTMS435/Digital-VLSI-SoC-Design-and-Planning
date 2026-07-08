@@ -10,81 +10,37 @@
 
 # Objective
 
-The objective of this phase is to understand the fundamentals of Digital ASIC Design, the complete RTL-to-GDSII implementation flow, and the open-source EDA ecosystem used throughout the workshop. This phase also introduces the GitHub Codespaces environment and demonstrates the synthesis of the reference **picorv32a** design using the **OpenLANE** flow and the **SKY130 Process Design Kit (PDK)**. :contentReference[oaicite:0]{index=0}
+The objective of this phase is to understand the fundamentals of Digital ASIC design, the complete RTL-to-GDSII implementation flow, and the open-source EDA ecosystem used throughout the workshop. This phase introduces the OpenLANE framework, the SKY130 Process Design Kit (PDK), GitHub Codespaces, and the synthesis of the PicoRV32 reference design using open-source tools. :contentReference[oaicite:0]{index=0}
 
 ---
 
 # Introduction
 
-Modern semiconductor chips integrate millions of transistors into a single integrated circuit known as a **System-on-Chip (SoC)**. Designing these chips requires a sequence of design, verification, synthesis, and physical implementation stages before fabrication.
-
-The **Digital VLSI SoC Design and Planning** workshop introduces this complete ASIC implementation flow using the open-source **OpenLANE** framework, enabling designers to transform a Verilog RTL design into a manufacturable GDSII layout using the **SKY130 PDK** and industry-standard open-source EDA tools. :contentReference[oaicite:1]{index=1}
+Digital ASIC design involves converting a hardware description written in Verilog RTL into a manufacturable integrated circuit layout (GDSII). Traditionally, this process relied on expensive commercial EDA tools. The introduction of the Google–SkyWater SKY130 open-source PDK together with the OpenLANE automated RTL-to-GDSII flow has enabled students, researchers, and engineers to perform a complete ASIC implementation using freely available tools. :contentReference[oaicite:1]{index=1}
 
 ---
 
 # Understanding System-on-Chip (SoC)
 
-A **System-on-Chip (SoC)** integrates several functional blocks such as processor cores, SRAM, GPIO peripherals, communication interfaces, analog IPs, clock generators, and other reusable Intellectual Property (IP) blocks onto a single silicon chip.
+A **System-on-Chip (SoC)** integrates multiple hardware components—including processor cores, memories, GPIO peripherals, communication interfaces, analog IPs, and other reusable Intellectual Property (IP) blocks—onto a single silicon chip. This integration improves performance, reduces power consumption, minimizes board area, and lowers manufacturing cost.
 
-This high level of integration offers:
-
-- Reduced power consumption
-- Higher performance
-- Smaller chip area
-- Lower manufacturing cost
-- Improved system reliability
-
-<p align="center">
-<img src="images/soc_architecture.png" width="850">
-</p>
-
-<p align="center">
-<b>Figure 1:</b> Example of a System-on-Chip (SoC) architecture showing processor, memories, peripherals, and foundry IPs.
-</p>
+**Figure 1:** System-on-Chip (SoC) Architecture.
 
 ---
 
 # From Software to Hardware
 
-Before implementing digital hardware, it is important to understand how software eventually executes on silicon.
+Every application written in a high-level programming language is translated into machine instructions before it can execute on hardware. The compiler converts source code into assembly language, the assembler generates machine code, and the operating system manages hardware resources before the processor executes the instructions. Understanding this software-to-hardware relationship forms the foundation for learning digital hardware implementation.
 
-A program written in a high-level language is first compiled into assembly instructions. The assembler converts these instructions into machine code, while the operating system manages memory and hardware resources. Finally, the processor executes the generated binary instructions.
-
-Understanding this software-to-hardware relationship provides the foundation for studying digital hardware implementation and ASIC design.
-
-<p align="center">
-<img src="images/software_to_hardware.png" width="900">
-</p>
-
-<p align="center">
-<b>Figure 2:</b> Software execution flow from application programs to hardware implementation.
-</p>
+**Figure 2:** Software-to-Hardware Execution Flow.
 
 ---
 
 # RTL-to-GDSII ASIC Design Flow
 
-The OpenLANE framework automates the complete RTL-to-GDSII implementation flow. Starting from a Verilog RTL description, the design undergoes:
+The OpenLANE flow automates the complete RTL-to-GDSII implementation process. Starting from a Verilog RTL description, the design passes through logic synthesis, floorplanning, placement, clock tree synthesis (CTS), routing, timing analysis, physical verification, and finally GDSII generation. Throughout this workshop, each of these stages will be studied and implemented using open-source EDA tools. :contentReference[oaicite:2]{index=2}
 
-1. RTL Design
-2. Logic Synthesis
-3. Floorplanning
-4. Placement
-5. Clock Tree Synthesis (CTS)
-6. Routing
-7. Static Timing Analysis (STA)
-8. Physical Verification
-9. GDSII Generation
-
-Each stage contributes towards transforming the logical design into a manufacturable integrated circuit layout. This workshop explores every stage using completely open-source tools. :contentReference[oaicite:2]{index=2}
-
-<p align="center">
-<img src="images/asic_flow.png" width="900">
-</p>
-
-<p align="center">
-<b>Figure 3:</b> RTL-to-GDSII Digital ASIC Design Flow.
-</p>
+**Figure 3:** RTL-to-GDSII ASIC Design Flow.
 
 ---
 
@@ -92,117 +48,48 @@ Each stage contributes towards transforming the logical design into a manufactur
 
 ## Step 1 – Accessing the Synthesis Reports
 
-After successfully completing logic synthesis, the generated reports were accessed from the OpenLANE run directory.
+After successfully completing the synthesis stage, the generated report files were accessed from the OpenLANE run directory. These reports contain synthesis statistics, design checks, sequential element information, and other implementation summaries that are useful for analyzing the synthesized design.
 
-The following Linux commands were used:
-
-```bash
-cd reports
-cd synthesis
-ls
-```
-
-The synthesis stage generated several report files containing design statistics, structural checks, sequential element information, and synthesis summaries.
-
-<p align="center">
-<img src="images/reports_terminal.png" width="1000">
-</p>
-
-<p align="center">
-<b>Figure 4:</b> Navigating to the synthesis reports directory and listing the generated report files.
-</p>
-
-A detailed explanation of every generated report is available in:
-
-- `Synthesis/Reports/info.md`
+**Figure 4:** Terminal showing the generated synthesis reports.
 
 ---
 
 ## Step 2 – Viewing the Synthesis Statistics Report
 
-The synthesis statistics report was opened using:
+The synthesis statistics report was opened using the Visual Studio Code editor available inside GitHub Codespaces. This report provides detailed information such as total cell count, wire count, standard-cell distribution, and overall synthesis statistics, allowing the synthesized implementation to be analyzed before proceeding to physical design.
 
-```bash
-code 1-synthesis.AREA_0.stat.rpt
-```
-
-This report provides an overview of the synthesized implementation, including:
-
-- Number of cells
-- Wire count
-- Standard cell utilization
-- Gate distribution
-
-These statistics are useful for understanding the complexity and resource utilization of the synthesized design.
-
-<p align="center">
-<img src="images/report_open.png" width="1000">
-</p>
-
-<p align="center">
-<b>Figure 5:</b> Opening the synthesis statistics report in the editor.
-</p>
+**Figure 5:** Opening the `1-synthesis.AREA_0.stat.rpt` report.
 
 ---
 
 ## Step 3 – Accessing the Generated Result Files
 
-The generated synthesis output files were accessed using:
+The synthesis stage also generated output files including the synthesized Verilog netlist (`picorv32a.v`) and the Standard Delay Format (`picorv32a.sdf`) file. These files serve as the primary inputs for the subsequent stages of floorplanning, placement, clock tree synthesis, routing, and timing analysis.
 
-```bash
-cd ../../results
-cd synthesis
-ls
-```
-
-The synthesis process produced:
-
-- `picorv32a.v`
-- `picorv32a.sdf`
-
-These files represent the primary outputs of the synthesis stage and are required for the subsequent physical design stages.
-
-<p align="center">
-<img src="images/results_terminal.png" width="1000">
-</p>
-
-<p align="center">
-<b>Figure 6:</b> Listing the synthesized output files.
-</p>
-
-A detailed explanation of these files is available in:
-
-- `Synthesis/Results/info.md`
+**Figure 6:** Terminal showing the generated synthesis result files.
 
 ---
 
-## Step 4 – Viewing the Synthesized Gate-Level Netlist
+## Step 4 – Viewing the Synthesized Netlist
 
-The synthesized Verilog netlist was opened using:
+The synthesized gate-level Verilog netlist was opened to observe the technology-mapped implementation produced by Yosys using the SKY130 standard-cell library. Unlike the original RTL, this file represents the actual hardware implementation that will be used during the remaining physical design stages.
 
-```bash
-code picorv32a.v
-```
+**Figure 7:** Opening the synthesized gate-level Verilog netlist.
 
-Unlike the original RTL source code, this file contains the technology-mapped implementation generated by **Yosys** using the SKY130 standard cell library. It serves as the primary input for floorplanning, placement, clock tree synthesis, routing, and timing analysis.
+---
 
-<p align="center">
-<img src="images/netlist_open.png" width="1000">
-</p>
+# Generated Reports and Result Files
 
-<p align="center">
-<b>Figure 7:</b> Opening the synthesized gate-level Verilog netlist.
-</p>
+The synthesis stage generated several report files and output files that summarize the synthesized implementation. To keep this documentation organized, a separate explanation has been provided for every generated file.
+
+- **Synthesis Reports:** `Synthesis/Reports/info.md`
+- **Synthesis Output Files:** `Synthesis/Results/info.md`
 
 ---
 
 # Flip-Flop Ratio
 
-As required in the workshop, the Flip-Flop Ratio was calculated using the generated synthesis reports.
-
-The calculation, observations, and interpretation are documented in the following section.
-
-> *(To be added.)*
+As required by the workshop, the Flip-Flop Ratio was calculated using the generated synthesis reports. The calculation, observations, and interpretation will be documented in the following section after extracting the required statistics from the synthesis reports.
 
 ---
 
@@ -210,15 +97,16 @@ The calculation, observations, and interpretation are documented in the followin
 
 - Understood the fundamentals of Digital ASIC and SoC design.
 - Learned the complete RTL-to-GDSII implementation flow.
-- Explored the OpenLANE open-source ASIC design framework.
-- Successfully executed logic synthesis using the OpenLANE flow.
-- Generated synthesis reports and technology-mapped output files.
-- Learned how synthesized netlists are produced from RTL designs.
-- Established the foundation for the remaining physical design stages.
+- Explored the OpenLANE open-source ASIC implementation framework.
+- Gained practical experience with GitHub Codespaces and Linux.
+- Successfully generated synthesis reports and synthesized output files.
+- Learned how synthesized gate-level netlists are produced from RTL designs.
+- Established the foundation for the remaining stages of Digital Physical Design.
 
 ---
 
 # References
 
 - VLSI System Design – Digital VLSI SoC Design and Planning Workshop. :contentReference[oaicite:3]{index=3}
-- OpenROAD Project Documentation. :contentReference[oaicite:4]{index=4}
+- OpenROAD Project and OpenLANE RTL-to-GDSII Flow. :contentReference[oaicite:4]{index=4}
+- Advanced Physical Design using OpenLANE and SKY130. :contentReference[oaicite:5]{index=5}
