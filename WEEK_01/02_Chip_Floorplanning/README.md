@@ -612,3 +612,201 @@ During Floorplanning, the designer determines:
 - Available Whitespace
 
 These decisions directly influence Placement, Clock Tree Synthesis (CTS), Routing, Timing Closure, and the overall quality of the final integrated circuit.
+
+
+
+
+
+# Placement
+
+## Introduction to Placement
+
+After successfully generating the floorplan, the next stage in the ASIC Physical Design flow is **Placement**.
+
+During Floorplanning, the EDA tool defines the physical boundaries of the chip, including the Die Area, Core Area, placement rows, utilization, and aspect ratio. However, at this stage, the synthesized standard cells have **not yet been assigned physical locations**.
+
+The objective of the Placement stage is to assign an optimal position for every standard cell within the Core Area while satisfying various design constraints such as timing, congestion, wire length, and power consumption.
+
+Unlike Floorplanning, which focuses on planning the chip layout, Placement focuses on arranging the logic cells inside the predefined floorplan.
+
+---
+
+## What is Placement?
+
+Placement is the process of positioning all synthesized standard cells inside the Core Area generated during the Floorplanning stage.
+
+The placement tool attempts to position cells such that:
+
+- Total wire length is minimized.
+- Routing congestion is reduced.
+- Timing requirements are satisfied.
+- Power consumption is minimized.
+- Cells do not overlap.
+- Design rules are maintained.
+
+The output of Placement serves as the input for the Clock Tree Synthesis (CTS) stage.
+
+---
+
+## Why is Placement Important?
+
+Placement is one of the most important stages in Physical Design because it directly influences the performance of the final integrated circuit.
+
+A well-optimized placement offers several advantages:
+
+- Reduced interconnect delay.
+- Lower routing congestion.
+- Improved setup and hold timing.
+- Reduced power consumption.
+- Better routing quality.
+- Faster timing convergence.
+
+On the other hand, poor placement may lead to:
+
+- Long interconnects.
+- Routing congestion.
+- Increased timing violations.
+- Larger power consumption.
+- Difficult Clock Tree Synthesis.
+- Increased routing complexity.
+
+---
+
+## Objectives of Placement
+
+The Placement stage aims to:
+
+- Place every synthesized standard cell inside the Core Area.
+- Minimize total wire length.
+- Reduce routing congestion.
+- Improve timing performance.
+- Prepare the design for Clock Tree Synthesis.
+- Ensure legal placement without overlapping cells.
+
+---
+
+## Types of Placement
+
+Placement is generally performed in three stages.
+
+### 1. Global Placement
+
+During Global Placement, the placement tool determines approximate locations for all standard cells.
+
+At this stage:
+
+- Cell overlap is allowed.
+- The focus is on minimizing wire length and congestion.
+- Timing optimization is considered.
+
+Global Placement provides an initial estimate of where cells should be located.
+
+---
+
+### 2. Detailed Placement
+
+During Detailed Placement, the approximate locations generated during Global Placement are refined.
+
+The placement tool:
+
+- Removes overlapping cells.
+- Aligns cells with placement rows.
+- Ensures legal placement.
+- Maintains design rule constraints.
+
+The output is a physically legal placement that is ready for Clock Tree Synthesis.
+
+---
+
+### 3. Placement Optimization
+
+After Detailed Placement, optimization techniques are applied to improve the quality of the placement.
+
+Typical optimizations include:
+
+- Cell resizing.
+- Buffer insertion.
+- Cell movement.
+- Congestion reduction.
+- Timing optimization.
+
+These optimizations improve setup timing, reduce wire length, and prepare the design for subsequent Physical Design stages.
+
+---
+
+## Placement in OpenLANE
+
+The OpenLANE flow uses **OpenROAD** for Placement.
+
+During this stage, OpenROAD reads:
+
+- Synthesized Netlist
+- Floorplan DEF
+- Technology LEF
+- Standard Cell LEF
+- Timing Libraries
+
+Based on these inputs, the placement engine computes suitable positions for all standard cells while optimizing timing, wire length, and congestion.
+
+The generated placement database is then passed to the Clock Tree Synthesis (CTS) stage.
+
+---
+
+## Placement Output
+
+After successful Placement, the design contains:
+
+- Legally placed Standard Cells.
+- Placement Rows.
+- Fixed Macros.
+- Optimized Cell Locations.
+- Updated DEF File.
+
+Although the cells have now been assigned physical locations, they are **not yet electrically connected**.
+
+Routing is performed in a later stage to establish the required electrical connections between the placed cells.
+
+---
+
+## Difference Between Floorplanning and Placement
+
+| Floorplanning | Placement |
+|--------------|-----------|
+| Defines the chip structure | Places standard cells inside the core |
+| Determines Die and Core Area | Assigns physical locations to cells |
+| Places macros and I/O pins | Places synthesized standard cells |
+| Creates placement rows | Optimizes cell positions |
+| Output is Floorplan | Output is Placed Design |
+
+---
+
+## Summary
+
+Placement is the stage where the synthesized standard cells are physically arranged inside the Core Area generated during Floorplanning.
+
+A good placement minimizes wire length, reduces routing congestion, improves timing performance, and prepares the design for Clock Tree Synthesis and Routing. Since Placement directly affects almost every subsequent stage of Physical Design, it plays a crucial role in determining the performance, power, and area of the final integrated circuit.
+
+
+
+<img width="1918" height="882" alt="Screenshot 2026-07-13 233941" src="https://github.com/user-attachments/assets/e24c5f26-673c-4523-b4ea-1a70bce0ec62" />
+
+<img width="1626" height="890" alt="Screenshot 2026-07-13 234114" src="https://github.com/user-attachments/assets/9f90cb6c-0e7f-4c06-8973-17d64605e6bd" />
+
+<img width="1785" height="887" alt="Screenshot 2026-07-13 234212" src="https://github.com/user-attachments/assets/8d28c6ed-d67b-4cc3-a178-ff0b7735e9d7" />
+
+<img width="1761" height="901" alt="Screenshot 2026-07-13 234304" src="https://github.com/user-attachments/assets/d625e9aa-78af-461a-b1ab-b6d19bc9f236" />
+
+<img width="1632" height="893" alt="Screenshot 2026-07-13 234411" src="https://github.com/user-attachments/assets/130cd73c-5f88-4794-9810-0f1a707abf70" />
+
+<img width="1636" height="901" alt="Screenshot 2026-07-13 234603" src="https://github.com/user-attachments/assets/b20e638a-57dd-44f2-9afe-670d0fac0ebf" />
+
+<img width="1655" height="917" alt="Screenshot 2026-07-14 000723" src="https://github.com/user-attachments/assets/d8d4504d-5ae8-4041-85ec-64d4343c9bff" />
+
+<img width="1708" height="898" alt="Screenshot 2026-07-14 000841" src="https://github.com/user-attachments/assets/9c7350be-b081-41e4-b3a1-0f2ba81942d7" />
+
+
+
+
+
+
+
