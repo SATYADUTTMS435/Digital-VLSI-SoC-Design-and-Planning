@@ -1,24 +1,43 @@
 # Chip Floorplanning
 
-## Introduction
+Floorplanning is the first stage of the ASIC Physical Design flow where the synthesized gate-level netlist begins transforming into a physical layout. During this stage, the overall dimensions of the chip are determined, the core area is defined, and space is allocated for standard cells, macros, routing resources, and power planning.
 
-After completing the synthesis stage, the RTL design is converted into a **gate-level netlist** consisting of interconnected standard cells. Although the logical functionality of the circuit has been established, the design still lacks a physical representation on silicon.
+Unlike synthesis, which focuses on the logical implementation of the design, floorplanning focuses on its physical organization on the silicon die. A well-planned floorplan plays a crucial role in reducing routing congestion, improving timing performance, minimizing power consumption, and optimizing chip area.
 
-The next stage in the ASIC Physical Design flow is **Floorplanning**, which marks the beginning of the physical implementation process. During this stage, the overall dimensions of the chip are determined, the core region is defined, and sufficient space is allocated for standard cells, macros, power distribution, and routing resources.
+In this module, we will explore the fundamental concepts of chip floorplanning, understand important design parameters such as utilization factor and aspect ratio, visualize the generated floorplan and placement using Magic Layout Editor, and inspect different standard cells present inside the design.
 
-Floorplanning plays a vital role in the overall quality of the design. A well-planned floorplan reduces routing congestion, minimizes interconnect delay, improves timing performance, lowers power consumption, and makes subsequent stages such as Placement, Clock Tree Synthesis (CTS), and Routing much more efficient.
+---
 
-This module explores the fundamental concepts of chip floorplanning using the OpenLANE flow, followed by visualization of the generated floorplan and placement results using Magic Layout.
+# Objectives
+
+The objectives of this phase are:
+
+- Understand the purpose of Floorplanning in the ASIC Physical Design flow.
+- Learn the difference between Die Area and Core Area.
+- Understand Utilization Factor and Aspect Ratio.
+- Study the role of Standard Cells and Pre-Placed Cells (Macros).
+- Generate the Floorplan using OpenLANE.
+- Visualize the generated Floorplan using Magic.
+- Perform Placement and observe the arrangement of standard cells.
+- Inspect different standard cells using Magic Layout Editor.
 
 ---
 
 # Theory
 
+## Introduction to Floorplanning
+
+After the synthesis stage, the RTL design is converted into a **gate-level netlist** consisting of interconnected standard cells. Although the logical functionality of the circuit has been established, the design still lacks a physical representation on silicon.
+
+The next stage in the ASIC Physical Design flow is **Floorplanning**, which marks the beginning of the physical implementation process. During this stage, the overall dimensions of the chip are determined, the core region is defined, and sufficient space is allocated for standard cells, macros, power distribution, and routing resources.
+
+Floorplanning plays a vital role in the overall quality of the design. A well-planned floorplan reduces routing congestion, minimizes interconnect delay, improves timing performance, lowers power consumption, and makes subsequent stages such as Placement, Clock Tree Synthesis (CTS), and Routing much more efficient.
+
+---
+
 ## What is Floorplanning?
 
-Floorplanning is the first physical design stage after synthesis in the ASIC design flow. It is the process of defining the physical structure of the integrated circuit by determining the dimensions of the chip and organizing the placement region before standard cells are placed.
-
-Unlike synthesis, which focuses on the logical implementation of the design, floorplanning focuses on the **physical organization** of all design components on the silicon die.
+Floorplanning is the first physical design stage after synthesis in the ASIC design flow. It is the process of defining the physical structure of an integrated circuit by determining the dimensions of the chip and organizing the placement region before standard cells are placed.
 
 During floorplanning, the EDA tool determines:
 
@@ -29,9 +48,9 @@ During floorplanning, the EDA tool determines:
 - Placement Rows
 - Macro Locations
 - I/O Pin Locations
-- Initial Power Planning Region
+- Initial Power Distribution Planning
 
-The generated floorplan serves as the foundation for all remaining stages of Physical Design.
+The generated floorplan serves as the foundation for all subsequent stages of Physical Design.
 
 ---
 
@@ -41,15 +60,15 @@ The quality of a floorplan directly affects the performance and manufacturabilit
 
 A properly designed floorplan helps to:
 
-- Reduce routing congestion
-- Minimize wire length
-- Improve setup and hold timing
-- Lower dynamic power consumption
-- Reduce overall chip area
-- Improve routing efficiency
-- Simplify placement and Clock Tree Synthesis
+- Reduce routing congestion.
+- Minimize wire length.
+- Improve setup and hold timing.
+- Lower power consumption.
+- Reduce silicon area.
+- Improve routing efficiency.
+- Simplify Placement and Clock Tree Synthesis.
 
-An inefficient floorplan can result in excessive routing congestion, increased timing violations, poor power distribution, and a larger silicon area.
+An inefficient floorplan may lead to excessive routing congestion, timing violations, poor power distribution, and increased chip area.
 
 ---
 
@@ -82,24 +101,25 @@ Signoff
 
 Floorplanning represents the first stage where the logical circuit begins transforming into an actual silicon layout.
 
-# Fundamental Concepts of Floorplanning
+---
+
+# Fundamental Concepts
 
 ## Die Area
 
-The **Die** is the complete silicon chip obtained after the fabrication process. It represents the total physical area available for implementing the design.
+The **Die** is the complete silicon chip fabricated from the semiconductor wafer. It represents the total physical area available for implementing the integrated circuit.
 
-Apart from the digital logic, the die also accommodates:
+A die typically consists of:
 
 - Core Area
 - Input/Output (I/O) Pads
 - Power Rings
 - Corner Cells
-- Seal Ring
 - Routing Resources
 
-The dimensions of the die are determined during the floorplanning stage based on the overall design requirements.
+The die dimensions are determined during floorplanning based on the overall design requirements.
 
-> **Note:** The die is the complete chip, whereas the core is only a portion of the die where standard cells are placed.
+> **Note:** The die represents the entire chip, whereas the core is only the region used for placing digital logic.
 
 ---
 
@@ -107,101 +127,48 @@ The dimensions of the die are determined during the floorplanning stage based on
 
 The **Core Area** is the region inside the die where all standard cells are placed during the placement stage.
 
-Unlike the die, the core does not contain the I/O pads or chip boundary structures.
+Unlike the die, the core excludes the I/O pads and chip boundary structures.
 
 The size of the core depends on:
 
-- Number of standard cells
-- Utilization factor
+- Total standard cell area
+- Target utilization
 - Aspect ratio
 - Routing requirements
-- Future optimization space
+- Timing optimization
 
-A properly sized core provides sufficient whitespace for routing and timing optimization while minimizing unused silicon area.
+A properly selected core size provides sufficient routing space while minimizing unused silicon area.
 
 ---
 
 ## Utilization Factor
 
-The **Utilization Factor** defines the percentage of the core area occupied by standard cells.
+The **Utilization Factor** represents the percentage of the core area occupied by standard cells.
 
-It is one of the most important parameters during floorplanning because it directly influences routing congestion and placement quality.
-
-### Formula
+It is calculated as:
 
 \[
-\text{Utilization Factor} =
-\frac{\text{Area occupied by Standard Cells}}
+\text{Utilization Factor}=
+\frac{\text{Standard Cell Area}}
 {\text{Core Area}}
-\times 100
+\times100
 \]
 
-### Example
+A lower utilization leaves more whitespace for routing and optimization but increases chip area.
 
-Suppose the total standard cell area is **600 μm²** and the core area is **1000 μm²**.
+A higher utilization reduces chip area but may increase routing congestion and timing violations.
 
-Then,
-
-```
-Utilization = (600 / 1000) × 100 = 60%
-```
-
-This means **60% of the core area is occupied by standard cells**, while the remaining **40% is reserved for routing resources, buffers, optimization, and future design modifications.**
-
-### Effects of Utilization
-
-#### Low Utilization
-
-Advantages
-
-- More routing space
-- Lower congestion
-- Easier timing optimization
-- Better routing flexibility
-
-Disadvantages
-
-- Larger chip area
-- Increased manufacturing cost
-
----
-
-#### High Utilization
-
-Advantages
-
-- Smaller chip area
-- Reduced fabrication cost
-
-Disadvantages
-
-- Higher routing congestion
-- Longer routing runtime
-- Increased timing violations
-- Difficult optimization
-
-In practical ASIC designs, utilization is selected carefully to maintain a balance between routing efficiency and silicon area.
+Therefore, an optimum utilization factor is preferred in practical ASIC designs.
 
 ---
 
 ## Aspect Ratio
 
-The **Aspect Ratio** represents the ratio between the height and width of the core area.
-
-### Formula
+The **Aspect Ratio** defines the ratio between the height and width of the core.
 
 \[
-Aspect\ Ratio =
-\frac{Height}{Width}
+Aspect\ Ratio=\frac{Height}{Width}
 \]
-
-Examples
-
-| Height | Width | Aspect Ratio | Shape |
-|---------|-------|--------------|-------|
-| 100 | 100 | 1 | Square |
-| 200 | 100 | 2 | Tall Rectangle |
-| 100 | 200 | 0.5 | Wide Rectangle |
 
 The aspect ratio influences:
 
@@ -211,13 +178,13 @@ The aspect ratio influences:
 - Timing performance
 - Overall chip dimensions
 
-Choosing an appropriate aspect ratio ensures efficient utilization of the available silicon area.
+Choosing an appropriate aspect ratio helps achieve better routing efficiency and overall design quality.
 
 ---
 
 ## Standard Cells
 
-Standard Cells are pre-designed logic building blocks provided by the technology library.
+Standard Cells are pre-designed logic building blocks available in the technology library.
 
 Examples include:
 
@@ -230,15 +197,13 @@ Examples include:
 - Multiplexers
 - Flip-Flops
 
-After synthesis, the RTL design is converted into an interconnected network of these standard cells.
-
-During the placement stage, OpenROAD automatically positions these cells inside the core area.
+After synthesis, the RTL design is converted into an interconnected network of these standard cells, which are later placed inside the core during the placement stage.
 
 ---
 
 ## Pre-Placed Cells (Macros)
 
-Macros are relatively large pre-designed functional blocks that are placed before the placement of standard cells.
+Macros are relatively large pre-designed functional blocks whose internal layout has already been completed.
 
 Examples include:
 
@@ -246,11 +211,27 @@ Examples include:
 - ROM
 - PLL
 - Analog IP
-- Memory Blocks
-- Embedded Processors
+- Embedded Memory
 
-Unlike standard cells, macros are generally fixed during floorplanning because of their large size and predefined layout.
+Unlike standard cells, macros are generally fixed before placement because of their large size and predefined layout.
 
-The placement tool arranges standard cells around these macros while ensuring routing accessibility and timing closure.
+The placement tool arranges standard cells around these macros while maintaining routing accessibility and timing performance.
 
-Since macros occupy a significant portion of the chip area, their placement greatly affects routing congestion, wire length, and overall timing performance.
+Since macros occupy a significant portion of the chip area, their placement has a major influence on routing congestion, wire length, and overall timing closure.
+
+---
+
+## Importance of Floorplanning
+
+Floorplanning forms the foundation of the entire Physical Design flow.
+
+A well-planned floorplan helps to:
+
+- Reduce routing congestion.
+- Minimize interconnect length.
+- Improve timing performance.
+- Lower power consumption.
+- Reduce overall chip area.
+- Simplify Placement, CTS, and Routing.
+
+Since every subsequent stage depends on the floorplan, careful planning at this stage greatly improves the quality of the final integrated circuit.
