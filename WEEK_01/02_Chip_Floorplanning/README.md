@@ -227,7 +227,7 @@ Each of these parameters will be discussed in detail in the following sections.
 
 ## 1. Die Area
 
-The **Die** is the complete piece of silicon obtained after the wafer fabrication process. It represents the total physical chip that will eventually be packaged and used in electronic systems.
+The **Die** is the complete silicon chip obtained after the wafer fabrication process. It represents the total physical area available for implementing the integrated circuit.
 
 The die consists of several regions, including:
 
@@ -240,27 +240,25 @@ The die consists of several regions, including:
 
 Every physical component of the integrated circuit must fit within the die boundary.
 
-In simple terms, the **Die** can be thought of as the **entire plot of land** on which a house is built.
-
 ### Real-World Analogy
 
-Imagine purchasing a plot measuring **50 m × 40 m**.
+Imagine purchasing a plot of land measuring **50 m × 40 m**.
 
-This entire plot represents the **Die**.
+The entire plot represents the **Die**.
 
-Inside the plot, you construct:
+Inside this plot, you construct:
 
 - House
 - Garden
 - Parking Area
 - Compound Wall
 
-Similarly, in ASIC design,
+Similarly, in ASIC design:
 
 - Plot = Die
 - House = Core
-- Parking = I/O Pads
-- Boundary Wall = Seal Ring
+- Parking Area = I/O Pads
+- Compound Wall = Seal Ring
 
 The die therefore represents the complete chip.
 
@@ -268,20 +266,18 @@ The die therefore represents the complete chip.
 
 ## 2. Core Area
 
-The **Core Area** is the region inside the die where all the digital logic is implemented.
+The **Core Area** is the region inside the die where all synthesized standard cells are placed during the Placement stage.
 
-Only the synthesized standard cells are placed inside the core.
-
-The Core does **not** include:
+Unlike the die, the core does **not** include:
 
 - I/O Pads
 - Corner Cells
 - Seal Ring
 - Chip Boundary
 
-The size of the Core depends upon
+The size of the Core depends upon:
 
-- Number of Standard Cells
+- Total Standard Cell Area
 - Utilization Factor
 - Aspect Ratio
 - Routing Resources
@@ -291,201 +287,170 @@ The Placement stage uses this Core Area to arrange all synthesized standard cell
 
 ---
 
-### Difference between Die and Core
+### Difference Between Die and Core
 
 | Die Area | Core Area |
 |-----------|-----------|
-| Entire silicon chip | Region where logic is placed |
-| Contains IO Pads | Does not contain IO Pads |
+| Complete silicon chip | Region where logic cells are placed |
+| Contains I/O Pads | Does not contain I/O Pads |
 | Contains Seal Ring | Does not contain Seal Ring |
-| Contains Core | Located inside Die |
-| Larger | Smaller |
+| Contains Core | Located inside the Die |
+| Larger in size | Smaller in size |
 
 ---
 
 ## 3. Utilization Factor
 
-One of the most important parameters during Floorplanning is the **Utilization Factor**.
+The **Utilization Factor** specifies how much of the Core Area is occupied by Standard Cells.
 
-It specifies how much of the Core Area is occupied by Standard Cells.
+It is one of the most important parameters during Floorplanning because it directly affects placement quality, routing congestion, timing closure, and chip area.
 
-Mathematically,
+### Formula
 
-$$
-\text{Utilization}=
-\frac{\text{Standard Cell Area}}
-{\text{Core Area}}
-\times100
-$$
-
----
+```text
+Utilization (%) = (Standard Cell Area / Core Area) × 100
+```
 
 ### Example 1
 
-Suppose
+Suppose,
 
-Standard Cell Area
-
-```
-600 μm²
-```
-
-Core Area
-
-```
-1000 μm²
+```text
+Standard Cell Area = 600 μm²
+Core Area          = 1000 μm²
 ```
 
-Then,
+Calculation:
 
-$$
-\text{Utilization}
-=
-\frac{600}{1000}
-\times100
-=
-60\%
-$$
+```text
+Utilization = (600 / 1000) × 100
+            = 0.6 × 100
+            = 60%
+```
 
-This means
+This means:
 
-- 60% of the Core contains Standard Cells.
-- 40% is left empty.
+- **60%** of the Core Area is occupied by Standard Cells.
+- The remaining **40%** is left empty.
 
-The remaining empty space is called **Whitespace**.
-
-Whitespace is extremely important because it provides room for
+This unused region is called **Whitespace**, which is required for:
 
 - Routing
-- Buffers
-- ECO
-- CTS Buffers
-- Optimization
+- Clock Tree Synthesis (CTS)
+- Buffer Insertion
+- Engineering Change Orders (ECO)
+- Future Design Optimizations
 
 ---
 
 ### Example 2
 
-Suppose
+Suppose,
 
-```
+```text
 Standard Cell Area = 850 μm²
-
-Core Area = 1000 μm²
+Core Area          = 1000 μm²
 ```
 
-Then,
+Calculation:
 
-$$
-\frac{850}{1000}
-\times100
-=
-85\%
-$$
+```text
+Utilization = (850 / 1000) × 100
+            = 0.85 × 100
+            = 85%
+```
 
-An 85% utilization indicates that the core is densely packed.
+An **85% utilization** indicates that the design is densely packed.
 
-Although the chip area becomes smaller, routing becomes much more difficult.
+Although this reduces the overall chip area, it also increases routing congestion and makes timing optimization more difficult.
 
 ---
 
-### What happens if Utilization is too Low?
+### Low Utilization
 
-Suppose
+Suppose,
 
-```
+```text
 Utilization = 30%
 ```
 
-Advantages
+**Advantages**
 
-- Very easy routing
-- Low congestion
-- Easy timing optimization
+- More routing space
+- Lower congestion
+- Easier timing optimization
+- Better placement flexibility
 
-Disadvantages
+**Disadvantages**
 
-- Large chip area
+- Larger chip area
 - Higher fabrication cost
 - Wasted silicon
 
 ---
 
-### What happens if Utilization is too High?
+### High Utilization
 
-Suppose
+Suppose,
 
-```
+```text
 Utilization = 95%
 ```
 
-Advantages
+**Advantages**
 
-- Smaller chip
-- Lower silicon cost
+- Smaller chip size
+- Lower fabrication cost
 
-Disadvantages
+**Disadvantages**
 
-- Routing congestion
-- Timing violations
-- Difficult CTS
-- Difficult ECO
-- Larger routing runtime
+- High routing congestion
+- Increased timing violations
+- Difficult Clock Tree Synthesis
+- Difficult ECO implementation
+- Longer routing runtime
 
 ---
 
 ### Industry Practice
 
-Most commercial ASICs do **not** use 100% utilization.
+Commercial ASIC designs rarely use **100% utilization**.
 
-Depending on the complexity of the design,
+Most modern digital designs use approximately:
 
-Typical utilization ranges between
-
-```
+```text
 55% – 75%
 ```
 
-This provides sufficient whitespace for routing and timing optimization.
+This leaves sufficient whitespace for routing, CTS, buffering, and timing optimization.
 
 ---
 
 ## 4. Aspect Ratio
 
-Aspect Ratio defines the shape of the Core.
+The **Aspect Ratio** defines the shape of the Core Area.
 
-It is given by
+### Formula
 
-$$
-Aspect\ Ratio
-=
-\frac{Height}
-{Width}
-$$
+```text
+Aspect Ratio = Height / Width
+```
 
 ---
 
 ### Example 1
 
-Height
-
-```
-100 μm
-```
-
-Width
-
-```
-100 μm
+```text
+Height = 100 μm
+Width  = 100 μm
 ```
 
-$$
-Aspect\ Ratio
-=
-\frac{100}{100}
-=
-1
-$$
+Calculation:
+
+```text
+Aspect Ratio = 100 / 100
+             = 1
+```
 
 The Core becomes a **Square**.
 
@@ -493,23 +458,17 @@ The Core becomes a **Square**.
 
 ### Example 2
 
-Height
-
-```
-200 μm
-```
-
-Width
-
-```
-100 μm
+```text
+Height = 200 μm
+Width  = 100 μm
 ```
 
-$$
-Aspect\ Ratio
-=
-2
-$$
+Calculation:
+
+```text
+Aspect Ratio = 200 / 100
+             = 2
+```
 
 The Core becomes a **Tall Rectangle**.
 
@@ -517,23 +476,17 @@ The Core becomes a **Tall Rectangle**.
 
 ### Example 3
 
-Height
-
-```
-100 μm
-```
-
-Width
-
-```
-250 μm
+```text
+Height = 100 μm
+Width  = 250 μm
 ```
 
-$$
-Aspect\ Ratio
-=
-0.4
-$$
+Calculation:
+
+```text
+Aspect Ratio = 100 / 250
+             = 0.4
+```
 
 The Core becomes a **Wide Rectangle**.
 
@@ -541,15 +494,15 @@ The Core becomes a **Wide Rectangle**.
 
 ### Why is Aspect Ratio Important?
 
-Changing the Aspect Ratio changes
+Changing the Aspect Ratio affects:
 
 - Placement Quality
 - Routing Congestion
 - Wire Length
-- Timing
-- Clock Tree Shape
+- Timing Performance
+- Clock Tree Structure
 
-Choosing an appropriate Aspect Ratio improves the overall Physical Design quality.
+A suitable Aspect Ratio helps reduce congestion and improves the overall quality of the physical design.
 
 ---
 
@@ -557,7 +510,7 @@ Choosing an appropriate Aspect Ratio improves the overall Physical Design qualit
 
 Standard Cells are pre-designed digital logic blocks available in the Standard Cell Library.
 
-Examples include
+Examples include:
 
 - Inverter
 - Buffer
@@ -567,48 +520,44 @@ Examples include
 - Multiplexer
 - D Flip-Flop
 
-These cells are characterized for
+These cells are fully characterized for:
 
 - Timing
 - Area
 - Power
 - Leakage
 
-During Placement, millions of Standard Cells are automatically arranged inside the Core.
+After synthesis, the RTL design is converted into a network of these Standard Cells, which are automatically placed inside the Core Area during Placement.
 
 ---
 
 ## 6. Pre-Placed Cells (Macros)
 
-Macros are comparatively large pre-designed functional blocks.
+Macros are comparatively large pre-designed functional blocks whose layouts are already optimized.
 
-Examples include
+Examples include:
 
 - SRAM
 - ROM
 - PLL
-- Analog Blocks
+- Analog IP
 - Embedded Memory
 - Processor Core
 
-Unlike Standard Cells,
+Unlike Standard Cells, Macros are:
 
-Macros are
-
-- Larger
-- Fixed
-- Already designed
+- Larger in size
+- Fixed during Floorplanning
 - Not movable during Placement
+- Pre-designed and pre-verified
 
-The Placement tool arranges Standard Cells around these Macros.
+The Placement tool arranges Standard Cells around these Macros while ensuring routing accessibility and timing closure.
 
----
+### Real-World Analogy
 
-### Real-Life Analogy
+Consider the construction of a university campus.
 
-Imagine constructing a university campus.
-
-Large buildings such as
+Large buildings such as:
 
 - Library
 - Auditorium
@@ -616,19 +565,18 @@ Large buildings such as
 
 are constructed first.
 
-Small objects such as
+Later, smaller objects like:
 
-- Benches
 - Chairs
+- Benches
 - Tables
 
-are arranged later.
+are arranged inside or around them.
 
 Similarly,
 
-Macros behave like large buildings,
-
-while Standard Cells behave like chairs.
+- **Macros** behave like large buildings.
+- **Standard Cells** behave like chairs and tables.
 
 ---
 
@@ -636,32 +584,31 @@ while Standard Cells behave like chairs.
 
 Whitespace is the unused portion of the Core Area.
 
-Although it appears empty, it is extremely important.
+Although it appears empty, it plays a very important role in Physical Design.
 
-Whitespace provides space for
+Whitespace provides space for:
 
-- Routing
-- CTS Buffers
+- Signal Routing
+- Clock Tree Buffers
 - Timing Optimization
-- ECO
+- ECO Modifications
 - Future Design Changes
 
-Without sufficient whitespace,
-
-the routing tool may fail to complete the design successfully.
+Without sufficient whitespace, routing becomes difficult, congestion increases, and the design may fail to meet timing requirements.
 
 ---
 
 ## Summary
 
-During Floorplanning, the designer determines
+During Floorplanning, the designer determines:
 
 - Die Size
 - Core Size
-- Utilization
+- Utilization Factor
 - Aspect Ratio
 - Placement Rows
 - Macro Locations
 - Routing Resources
+- Available Whitespace
 
-These decisions directly influence Placement, Clock Tree Synthesis, Routing, Timing, and the overall quality of the final integrated circuit.
+These decisions directly influence Placement, Clock Tree Synthesis (CTS), Routing, Timing Closure, and the overall quality of the final integrated circuit.
