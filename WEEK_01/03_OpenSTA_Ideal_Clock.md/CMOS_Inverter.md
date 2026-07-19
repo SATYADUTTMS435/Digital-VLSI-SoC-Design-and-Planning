@@ -393,7 +393,7 @@ This value represents the discharge time of the output capacitance through the N
 ## Analysis
 
 The extracted Sky130 CMOS inverter successfully performs the expected switching operation. The measured propagation delays and transition times are all within the picosecond range, indicating fast switching performance. The rise time (**62.37 ps**) is slightly larger than the fall time (**41.78 ps**), which is expected due to the lower carrier mobility of PMOS transistors compared to NMOS transistors. Similarly, the measured propagation delays confirm that the inverter responds quickly to input transitions while accurately driving the output between logic HIGH and logic LOW levels.
----
+
 
 # Block 6 – LEF Generation and OpenLane Integration
 
@@ -438,3 +438,26 @@ A custom Sky130 CMOS inverter was analyzed, extracted, simulated, and characteri
 # Conclusion
 
 The Sky130 CMOS inverter was successfully characterized from physical layout to electrical simulation. This workflow demonstrates the complete process of custom standard-cell development, providing a foundation for integrating user-defined cells into an automated ASIC physical design flow.
+
+
+
+
+<img width="1918" height="863" alt="1" src="https://github.com/user-attachments/assets/33eb58fb-110a-4e54-b3db-fc437576a0f7" />
+
+<img width="1837" height="857" alt="2" src="https://github.com/user-attachments/assets/714f656d-7223-4e43-8674-45a58c8bb05c" />
+
+<img width="1637" height="900" alt="3" src="https://github.com/user-attachments/assets/eb04696b-0842-47eb-99cd-2a6d4c539094" />
+
+<img width="1491" height="380" alt="4" src="https://github.com/user-attachments/assets/40159bc0-23a1-4e73-ac72-ba46505c64ef" />
+
+<img width="1527" height="370" alt="5" src="https://github.com/user-attachments/assets/6992c30b-a821-4f73-b4c2-662f4c167960" />
+
+<img width="1552" height="372" alt="6" src="https://github.com/user-attachments/assets/69f3b092-3014-4075-afef-67d0f4bcb521" />
+
+<img width="1583" height="378" alt="7" src="https://github.com/user-attachments/assets/43423b27-46a9-4320-9e23-3effafa8817b" />
+
+
+
+
+
+
