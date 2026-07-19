@@ -28,7 +28,7 @@ Magic supports several important physical design operations:
 
 Because of these capabilities, Magic plays an important role in transforming a custom transistor layout into a reusable standard cell compatible with modern ASIC design flows.
 
-> **Refer to Figure X** for the Magic VLSI layout editor interface.
+
 
 ---
 
@@ -50,7 +50,7 @@ The technology file provides Magic with:
 
 After loading the layout, the standard cell becomes available for further editing and verification.
 
-> **Refer to Figure X** for the loaded inverter layout.
+
 
 ---
 
@@ -69,7 +69,7 @@ Magic provides a **Text Helper** utility for creating labels. While creating eac
 
 These ports later become the physical pins exported into the LEF file.
 
-> **Refer to Figures X–Y** for port creation using the Text Helper window and the labelled inverter layout.
+
 
 ---
 
@@ -95,7 +95,7 @@ The grid provides a visual reference that helps align pins, contacts, and routin
 
 Proper alignment reduces routing conflicts and improves compatibility with automated place-and-route tools.
 
-> **Refer to Figures X–Y** for the grid configuration.
+
 
 ---
 
@@ -116,7 +116,7 @@ The routing grid defined in this file determines where automated routers are all
 
 All standard-cell pins should align with these routing tracks to ensure successful routing during physical implementation.
 
-> **Refer to Figure X** for the `tracks.info` file.
+
 
 ---
 
@@ -130,7 +130,7 @@ save sky130_vsdinv.mag
 
 The saved layout contains all newly created ports and is used for subsequent LEF generation and physical verification.
 
-> **Refer to Figure X** for the successful layout save operation.
+
 
 ---
 
@@ -193,7 +193,7 @@ ls -al
 
 These layouts intentionally contain both correct and incorrect geometries that demonstrate various DRC violations.
 
-> **Refer to Figures X–Y** for downloading, extracting, and listing the DRC test files.
+
 
 ---
 
@@ -211,7 +211,7 @@ The layout is loaded using the Sky130 technology file so that Magic can evaluate
 
 After loading the layout, different geometries are displayed, including examples that satisfy the design rules and others that intentionally violate them.
 
-> **Refer to Figure X** for the loaded DRC test layout.
+
 
 ---
 
@@ -229,7 +229,7 @@ If no violations are present, Magic reports that the selected geometry satisfies
 
 This allows designers to quickly identify the cause of each violation and modify the layout accordingly.
 
-> **Refer to Figure X** for the DRC output displayed in the Magic console.
+
 
 ---
 
@@ -246,7 +246,7 @@ The incorrect example violates the minimum width requirement specified by the Sk
 
 By comparing both layouts, it becomes clear how small geometric differences can determine whether a layout is manufacturable.
 
-> **Refer to Figures X–Y** for the correct and incorrect polysilicon width examples.
+
 
 ---
 
@@ -264,7 +264,7 @@ This violation indicates that the transistor channel does not satisfy the minimu
 
 Maintaining the required transistor dimensions is essential for reliable fabrication and predictable electrical behavior.
 
-> **Refer to Figure X** for the transistor width DRC violation.
+
 
 ---
 
