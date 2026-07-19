@@ -244,27 +244,155 @@ A PULSE voltage source is applied to the input to alternate between logic LOW an
 The transient waveform verifies that the output is the logical complement of the input. The charging of the output node occurs through the PMOS transistor, while discharging occurs through the NMOS transistor.
 
 ---
+## Timing Analysis
 
-## Rise and Fall Time
+Transient analysis was performed using **NGSPICE** to evaluate the dynamic switching performance of the extracted Sky130 CMOS inverter. The timing parameters were measured directly from the simulated waveforms using standard CMOS timing conventions.
 
-Rise time is measured from **20% to 80% of VDD**, while fall time is measured from **80% to 20% of VDD**.
+For a supply voltage of:
 
-For:
-
-```
+```text
 VDD = 3.3 V
 ```
 
-- 20% = 0.66 V
-- 50% = 1.65 V
-- 80% = 2.64 V
+the reference voltages used for measurement are:
 
-These thresholds avoid non-linear regions and provide standardized timing measurements.
+| Threshold | Voltage |
+|-----------|---------|
+| 20% of VDD | 0.66 V |
+| 50% of VDD | 1.65 V |
+| 80% of VDD | 2.64 V |
 
-Propagation delay is measured at **50% of VDD**, representing the switching threshold of the inverter.
+The **20%–80%** thresholds are used to measure rise and fall times because they exclude the nonlinear regions near the beginning and end of the transition. The **50%** threshold is used for propagation delay since it represents the effective switching point of the inverter.
 
-> **Refer to Figures 11–15** for the transient waveform and rise, fall, and propagation delay calculations.
+---
 
+## High-to-Low Propagation Delay (tPHL)
+
+The High-to-Low propagation delay represents the time taken by the **output** to switch from HIGH to LOW after the **input** crosses **50% of VDD**.
+
+The delay is calculated as:
+
+```text
+tPHL = tOUTPUT(50%) − tINPUT(50%)
+```
+
+From the NGSPICE measurements:
+
+| Parameter | Time |
+|-----------|------|
+| Input @ 50% | 2.14982 ns |
+| Output @ 50% | 2.21070 ns |
+
+Therefore,
+
+```text
+tPHL = 2.21070 − 2.14982
+      = 0.06088 ns
+      = 60.88 ps
+```
+
+The measured delay indicates the time required for the NMOS transistor to discharge the output node after the input changes from LOW to HIGH.
+
+> **Refer to Figure X** for the NGSPICE cursor measurements used to determine the High-to-Low propagation delay.
+
+---
+
+## Low-to-High Propagation Delay (tPLH)
+
+The Low-to-High propagation delay represents the time taken by the **output** to switch from LOW to HIGH after the **input** crosses **50% of VDD**.
+
+The delay is calculated as:
+
+```text
+tPLH = tOUTPUT(50%) − tINPUT(50%)
+```
+
+From the simulation:
+
+| Parameter | Time |
+|-----------|------|
+| Input @ 50% | 4.04980 ns |
+| Output @ 50% | 4.07745 ns |
+
+Therefore,
+
+```text
+tPLH = 4.07745 − 4.04980
+      = 0.02765 ns
+      = 27.65 ps
+```
+
+This delay corresponds to the charging of the output node through the PMOS transistor.
+
+> **Refer to Figure X** for the NGSPICE measurements used to calculate the Low-to-High propagation delay.
+
+---
+
+## Rise Time
+
+Rise time is defined as the time required for the **output voltage** to increase from **20% (0.66 V)** to **80% (2.64 V)** of the supply voltage.
+
+The rise time is calculated as:
+
+```text
+Rise Time = t80% − t20%
+```
+
+From the NGSPICE measurements:
+
+| Parameter | Time |
+|-----------|------|
+| 20% (0.66 V) | 2.18177 ns |
+| 80% (2.64 V) | 2.24414 ns |
+
+Therefore,
+
+```text
+Rise Time = 2.24414 − 2.18177
+          = 0.06237 ns
+          = 62.37 ps
+```
+
+The measured rise time represents the time required for the PMOS transistor to charge the output capacitance from 20% to 80% of VDD.
+
+> **Refer to Figure X** for the rise-time measurement.
+
+---
+
+## Fall Time
+
+Fall time is defined as the time required for the **output voltage** to decrease from **80% (2.64 V)** to **20% (0.66 V)** of the supply voltage.
+
+The fall time is calculated as:
+
+```text
+Fall Time = t20% − t80%
+```
+
+From the NGSPICE measurements:
+
+| Parameter | Time |
+|-----------|------|
+| 80% (2.64 V) | 4.05281 ns |
+| 20% (0.66 V) | 4.09459 ns |
+
+Therefore,
+
+```text
+Fall Time = 4.09459 − 4.05281
+          = 0.04178 ns
+          = 41.78 ps
+```
+
+This value represents the discharge time of the output capacitance through the NMOS transistor.
+
+> **Refer to Figure X** for the fall-time measurement.
+
+---
+
+## Analysis
+
+The extracted Sky130 CMOS inverter successfully performs the expected switching operation. The measured propagation delays and transition times are all within the picosecond range, indicating fast switching performance. The rise time (**62.37 ps**) is slightly larger than the fall time (**41.78 ps**), which is expected due to the lower carrier mobility of PMOS transistors compared to NMOS transistors. Similarly, the measured propagation delays confirm that the inverter responds quickly to input transitions while accurately driving the output between logic HIGH and logic LOW levels.
 ---
 
 # Block 6 – LEF Generation and OpenLane Integration
