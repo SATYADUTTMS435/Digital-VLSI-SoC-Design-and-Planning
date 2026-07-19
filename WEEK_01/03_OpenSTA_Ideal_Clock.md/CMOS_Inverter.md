@@ -61,7 +61,7 @@ The CMOS inverter used in this experiment is provided as **sky130_inv.mag**. The
 
 The objective is to verify the layout, extract the circuit, characterize its timing, and prepare it for OpenLane integration.
 
-> **Refer to Figures 1–2** for the Sky130 CMOS inverter layout.
+
 
 ---
 
@@ -132,7 +132,6 @@ The gates of the PMOS and NMOS are connected together to form the input, while t
 
 This complementary switching produces the inverter functionality with minimal static power consumption.
 
-> **Refer to Figures 3–5** for the PMOS region, NMOS region, power rails, contacts, and complete layout.
 
 ---
 
@@ -167,7 +166,7 @@ Magic is used to verify that all ports are correctly labelled and connected befo
 
 Correct port definitions are essential because the LEF file uses these ports to describe the abstract physical interface of the standard cell for automated placement and routing.
 
-> **Refer to Figures 6–7** for port labels and grid alignment.
+
 
 ---
 
@@ -209,7 +208,6 @@ The extracted layout is converted into a SPICE netlist containing:
 
 During fabrication, unwanted parasitic resistance and capacitance are introduced due to metal routing, diffusion regions, and interconnects. These parasitics affect propagation delay, rise time, fall time, and overall circuit performance. Including them in the extracted SPICE netlist provides a more accurate simulation of the fabricated circuit.
 
-> **Refer to Figures 8–10** for the extraction process and generated SPICE netlist.
 
 ---
 
@@ -293,7 +291,6 @@ tPHL = 2.21070 − 2.14982
 
 The measured delay indicates the time required for the NMOS transistor to discharge the output node after the input changes from LOW to HIGH.
 
-> **Refer to Figure X** for the NGSPICE cursor measurements used to determine the High-to-Low propagation delay.
 
 ---
 
@@ -324,7 +321,6 @@ tPLH = 4.07745 − 4.04980
 
 This delay corresponds to the charging of the output node through the PMOS transistor.
 
-> **Refer to Figure X** for the NGSPICE measurements used to calculate the Low-to-High propagation delay.
 
 ---
 
@@ -355,7 +351,7 @@ Rise Time = 2.24414 − 2.18177
 
 The measured rise time represents the time required for the PMOS transistor to charge the output capacitance from 20% to 80% of VDD.
 
-> **Refer to Figure X** for the rise-time measurement.
+
 
 ---
 
@@ -386,7 +382,7 @@ Fall Time = 4.09459 − 4.05281
 
 This value represents the discharge time of the output capacitance through the NMOS transistor.
 
-> **Refer to Figure X** for the fall-time measurement.
+
 
 ---
 
