@@ -441,7 +441,7 @@ The Sky130 CMOS inverter was successfully characterized from physical layout to 
 
 
 
-<img width="1655" height="892" alt="Screenshot 2026-07-15 103031" src="https://github.com/user-attachments/assets/8af7525f-4fa4-4ecf-aa99-5c0de758b278" />
+
 
 <img width="1918" height="863" alt="1" src="https://github.com/user-attachments/assets/33eb58fb-110a-4e54-b3db-fc437576a0f7" />
 
@@ -457,12 +457,11 @@ The Sky130 CMOS inverter was successfully characterized from physical layout to 
 
 <img width="1583" height="378" alt="7" src="https://github.com/user-attachments/assets/43423b27-46a9-4320-9e23-3effafa8817b" />
 
-<img width="1655" height="892" alt="Screenshot 2026-07-15 103031" src="https://github.com/user-attachments/assets/6c901903-3171-482e-9509-03cbe6110a98" />
+<img width="1637" height="890" alt="Screenshot 2026-07-15 090958" src="https://github.com/user-attachments/assets/690b0451-a9f2-45dc-8452-1ec7f2cf36d7" />
 
-<img width="1655" height="892" alt="Screenshot 2026-07-15 103031" src="https://github.com/user-attachments/assets/8a133524-ce2f-4a1d-b9fd-a96d1b402b0d" />
+<img width="1652" height="897" alt="Screenshot 2026-07-15 091033" src="https://github.com/user-attachments/assets/de70dd5b-dda9-4903-a045-f3e4b243ceb0" />
 
-<img width="1655" height="892" alt="Screenshot 2026-07-15 103031" src="https://github.com/user-attachments/assets/a9185fae-3e0c-41db-88cd-73d189d86607" />
-
+<img width="1655" height="892" alt="Screenshot 2026-07-15 103031" src="https://github.com/user-attachments/assets/a4da485a-9c64-49a0-93a2-38a0c43420be" />
 
 
 
