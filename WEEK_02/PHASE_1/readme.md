@@ -1,86 +1,216 @@
-# Phase 1: RTL-to-GDSII Flow using Sky130HD
+# Phase 1: ORFS Execution in GitHub Codespaces
 
 ## Objective
 
-The objective of this phase was to execute the complete RTL-to-GDSII physical design flow using **OpenROAD Flow Scripts (ORFS)** with the **Sky130HD** technology platform and visualize the generated layout using **KLayout**.
+The objective of this phase was to execute the complete **RTL-to-GDSII** flow using **OpenROAD Flow Scripts (ORFS)** in GitHub Codespaces with the **Sky130HD** technology platform and verify the generated layout using **KLayout**.
 
 ---
 
-## Platform
+# Task 1.1 – Repository Setup
 
-- Environment: GitHub Codespaces
-- Flow: OpenROAD Flow Scripts (ORFS)
-- Technology: Sky130HD
-- Design: `gcd`
+The ORFS repository was forked and opened in **GitHub Codespaces**. After launching the Codespace, the development container was allowed to build completely before starting the implementation.
+
+## Devcontainer Build
+
+<img width="1857" height="871" alt="Screenshot 2026-07-20 121745" src="https://github.com/user-attachments/assets/8539bbe6-636e-4048-b43a-cd58655fc926" />
+
 
 ---
 
-## Commands Executed
+## Environment Verification
 
-Navigate to the ORFS flow directory:
+The following tool versions were verified to ensure that the environment was configured correctly.
+
+```bash
+openroad -version
+yosys -V
+python3 --version
+make --version
+```
+
+<img width="1917" height="913" alt="Screenshot 2026-07-20 123747" src="https://github.com/user-attachments/assets/e6aeb675-39b8-4e70-8405-3289c5a3cda0" />
+
+
+---
+
+# Task 1.2 – Run Sky130 Testcase in Cloud
+
+The RTL-to-GDSII flow was executed using the **Sky130HD** platform with the **gcd** design.
+
+## Navigate to Flow Directory
 
 ```bash
 cd orfs/flow
 ```
 
-Run the complete RTL-to-GDS flow:
+## Execute RTL-to-GDS Flow
 
 ```bash
 make PLATFORM=sky130hd DESIGN=gcd
 ```
 
-Open the generated GDS layout in KLayout:
+The flow completed all major stages successfully.
+
+---
+
+# Synthesis
+
+The synthesis stage completed successfully, generating the synthesized database and timing constraints.
+
+Generated files:
+
+- `1_synth.odb`
+- `1_synth.sdc`
+
+<img width="1917" height="877" alt="Screenshot 2026-07-20 134425" src="https://github.com/user-attachments/assets/30f87b76-0160-4aab-a9a2-66682ec9ecd4" />
+
+
+---
+
+# Floorplanning
+
+The floorplanning stage generated the initial physical layout and design floorplan.
+
+Generated files:
+
+- `2_1_floorplan.odb`
+- `2_1_floorplan.sdc`
+
+Design Area:
+
+- **2441 µm²**
+- **43% Utilization**
+
+<img width="1917" height="876" alt="image" src="https://github.com/user-attachments/assets/449e9439-1b3e-4d24-a808-e09d99466da3" />
+
+
+---
+
+# Placement
+
+Detailed placement was completed successfully.
+
+Generated file:
+
+- `3_5_place_dp.odb`
+
+Design Area:
+
+- **3518 µm²**
+- **62% Utilization**
+
+<img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/3139efea-b55d-4866-ac3c-e78280982bda" />
+
+
+---
+
+# Clock Tree Synthesis (CTS)
+
+Clock Tree Synthesis inserted clock buffers and optimized the clock network.
+
+Generated files:
+
+- `4_1_cts.odb`
+- `4_1_cts.sdc`
+
+Design Area:
+
+- **3995 µm²**
+- **71% Utilization**
+
+<img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/f0cc9749-c598-416f-96d4-46287fc7c2e1" />
+
+
+---
+
+# Routing
+
+Detailed routing completed successfully.
+
+Results:
+
+- No antenna violations
+- No net violations
+- No pin violations
+
+Generated file:
+
+- `5_2_route.odb`
+
+<img width="1916" height="866" alt="image" src="https://github.com/user-attachments/assets/d34e1c64-3a01-4da6-a3d2-0669705e5f0a" />
+
+
+---
+
+# Final GDS Generation
+
+The complete RTL-to-GDSII flow generated the final GDS layout successfully.
+
+Generated files:
+
+```text
+results/sky130hd/gcd/base/6_report.gds
+results/sky130hd/gcd/base/6_report.odb
+```
+
+<img width="1917" height="867" alt="image" src="https://github.com/user-attachments/assets/8e9c62f6-f737-4a80-9c2e-20bb5173b961" />
+
+
+
+---
+
+# KLayout Visualization
+
+The generated GDS layout was successfully opened using **KLayout**, confirming successful completion of the physical design flow.
+
+Command used:
 
 ```bash
 make klayout_6_final.gds PLATFORM=sky130hd DESIGN=gcd
 ```
 
----
+<img width="1662" height="907" alt="Screenshot 2026-07-20 132731" src="https://github.com/user-attachments/assets/c3a7b6c9-c787-4a0b-a827-f578e8378bc0" />
 
-## Flow Stages Completed
-
-The following stages were executed successfully:
-
-- RTL Synthesis
-- Floorplanning
-- Power Distribution Network (PDN)
-- Placement
-- Clock Tree Synthesis (CTS)
-- Global Routing
-- Detailed Routing
-- Fill Cell Insertion
-- GDS Generation
-- Final Reports
 
 ---
 
-## Output Generated
+# Runtime
 
-Final GDS file:
+The complete RTL-to-GDSII flow completed successfully.
 
-```text
-results/sky130hd/gcd/base/6_final.gds
+Approximate runtime:
+
+- **~7 minutes** (overall execution)
+
+<img width="1917" height="871" alt="Screenshot 2026-07-20 132310" src="https://github.com/user-attachments/assets/08b8733f-5c34-42f3-97be-b3f6a5c4a5ed" />
+
+
+---
+
+# Errors Faced
+
+Initially, the ORFS flow attempted to use the default **SCL180FS120** platform.
+
+Since the assignment required the **Sky130HD** platform, the flow was executed by explicitly specifying the platform:
+
+```bash
+make PLATFORM=sky130hd DESIGN=gcd
 ```
 
----
-
-## Result
-
-The complete RTL-to-GDSII implementation was successfully completed using the **Sky130HD** platform. The generated **6_final.gds** file was opened in **KLayout**, confirming successful layout generation and visualization.
+After selecting the correct platform, the RTL-to-GDSII flow executed successfully without further issues.
 
 ---
 
-## Screenshots
+# Timing Report
 
-### Environment Setup
+The Sky130HD ORFS flow completed successfully and generated the final GDSII layout.
 
-<img width="1917" height="912" alt="tool_version" src="https://github.com/user-attachments/assets/c738eeee-a035-47e2-b210-d9f92ac90f84" />
+A separate **WNS/TNS timing summary** was not generated by the default Sky130HD ORFS configuration used during this execution. Therefore, no standalone WNS/TNS report was available for inclusion.
 
-### Successful RTL-to-GDS Flow
+---
 
-<img width="1917" height="871" alt="Screenshot 2026-07-20 132310" src="https://github.com/user-attachments/assets/9b1afa90-aca5-46ac-b12b-8c8e359e7851" />
+# Conclusion
 
-### Final Layout in KLayout
+The complete RTL-to-GDSII implementation using **OpenROAD Flow Scripts (ORFS)** and the **Sky130HD** technology platform was successfully executed in GitHub Codespaces.
 
-<img width="1662" height="907" alt="Screenshot 2026-07-20 132731" src="https://github.com/user-attachments/assets/2a37d57e-e4b9-460b-8bc4-b0cfb45f533d" />
-
+The flow completed all major physical design stages including synthesis, floorplanning, placement, clock tree synthesis, routing, and GDS generation. The generated layout was successfully verified in **KLayout**, confirming successful execution of the complete physical design flow.
