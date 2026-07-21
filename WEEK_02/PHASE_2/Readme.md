@@ -24,3 +24,7 @@ Together, these two files automate the setup process and provide a complete envi
 | Python 3 | Ubuntu APT Package | Executes automation scripts, report generation, and helper utilities | Entire Flow |
 | Make | Ubuntu APT Package | Executes ORFS Makefiles and automates the RTL-to-GDS flow | Entire Flow |
 | Git | Ubuntu APT Package | Repository cloning and version control | Entire Project |
+
+
+<img width="1916" height="865" alt="Screenshot 2026-07-21 095710" src="https://github.com/user-attachments/assets/815d3bb0-cc21-40a7-b8e8-69742ea67dab" />
+
