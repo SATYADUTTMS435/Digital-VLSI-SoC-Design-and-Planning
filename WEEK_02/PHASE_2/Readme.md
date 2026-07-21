@@ -28,3 +28,35 @@ Together, these two files automate the setup process and provide a complete envi
 
 <img width="1916" height="865" alt="Screenshot 2026-07-21 095710" src="https://github.com/user-attachments/assets/815d3bb0-cc21-40a7-b8e8-69742ea67dab" />
 
+
+---
+
+## Task 2.2 – Flow Architecture Explanation
+
+### 1. What ORFS Automates
+
+OpenROAD Flow Scripts (ORFS) automates the complete RTL-to-GDSII design flow. Instead of manually executing every EDA tool, ORFS coordinates each stage of the ASIC implementation process, including synthesis, floorplanning, placement, clock tree synthesis (CTS), routing, timing analysis, and final GDSII generation. This reduces manual effort and ensures a consistent design flow.
+
+---
+
+### 2. How Makefiles Orchestrate the Flow
+
+ORFS uses Makefiles to automate the execution of different design stages. When the `make` command is executed, the Makefile calls the required scripts and tools in the correct sequence. It also manages dependencies, ensuring that each stage starts only after the previous stage has completed successfully.
+
+---
+
+### 3. Where Synthesis Ends and Physical Design Begins
+
+The synthesis stage ends after the RTL Verilog code is converted into a gate-level netlist using **Yosys**. Physical design begins with the floorplanning stage in **OpenROAD**, where the chip layout, power distribution, and placement regions are created.
+
+---
+
+### 4. Where Timing is Checked
+
+Timing analysis is performed using **OpenSTA**, which is integrated into OpenROAD. It checks whether the design satisfies the required timing constraints after synthesis and during later physical design stages such as placement, CTS, and routing.
+
+---
+
+### 5. Where GDS is Produced
+
+The final GDSII layout is generated at the end of the OpenROAD physical design flow after routing, fill insertion, and final verification. The generated GDSII file can then be viewed using KLayout for layout visualization and inspection.
