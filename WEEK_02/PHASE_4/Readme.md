@@ -2,23 +2,21 @@
 
 ## Objective
 
-The objective of this phase was to execute the same Sky130HD GCD testcase locally using ORFS and verify that the complete RTL-to-GDS flow could be completed successfully without relying on GitHub Codespaces. This phase also compares the local execution results with the cloud execution performed in Phase 1.
+The objective of this phase was to execute the same Sky130HD GCD testcase locally using OpenROAD Flow Scripts (ORFS) and verify that the complete RTL-to-GDS flow could be completed successfully without relying on GitHub Codespaces. The execution results were then compared with the cloud execution performed in Phase 1.
 
 ---
 
 # Testcase Used
 
-**Design:** GCD
-
-**Technology:** SKY130HD
-
-**Flow:** OpenROAD Flow Scripts (ORFS)
+- **Design:** GCD
+- **Technology:** SKY130HD
+- **Flow:** OpenROAD Flow Scripts (ORFS)
 
 ---
 
 # Flow Execution
 
-Navigate to the flow directory.
+Navigate to the ORFS flow directory.
 
 ```bash
 cd ~/Desktop/vsd-scl180-orfs/orfs/flow
@@ -30,7 +28,7 @@ Export the OSS CAD Suite binaries.
 export PATH=/opt/oss-cad-suite/bin:$PATH
 ```
 
-Execute the RTL-to-GDS flow.
+Execute the complete RTL-to-GDS flow.
 
 ```bash
 make \
@@ -39,94 +37,95 @@ OPENROAD_EXE=/usr/local/bin/openroad \
 DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk
 ```
 
-The complete RTL-to-GDS flow executed successfully after resolving all dependency and toolchain issues.
+The flow completed successfully after resolving all dependency and compatibility issues encountered during the local installation.
 
 ---
 
-# Flow Stages
+# RTL-to-GDS Flow Stages
 
 ## RTL Synthesis
 
-RTL was synthesized into a gate-level netlist using Yosys.
+The RTL design was synthesized into a gate-level netlist using Yosys.
 
-📸 **Screenshot:** Synthesis completion
+**Evidence:** Refer to **`Phase-4/files/`** for synthesis reports, synthesis statistics, and synthesis logs.
 
 ---
 
 ## Floorplanning
 
-Core dimensions, die area and initial placement regions were generated.
+The floorplanning stage generated the die area, core area, placement rows, and initial physical layout of the design.
 
-📸 **Screenshot:** Floorplan log snippet
+**Evidence:** Refer to **`Phase-4/files/`** for the floorplan report and floorplan visualization.
 
 ---
 
 ## Placement
 
-Standard cells were placed inside the core while minimizing congestion and wirelength.
+Standard cells were placed inside the core while optimizing placement density and estimated wirelength.
 
-📸 **Screenshot:** Placement completion
+**Evidence:** Refer to **`Phase-4/files/`** for placement reports and placement visualization.
 
 ---
 
 ## Clock Tree Synthesis (CTS)
 
-Clock buffers and clock routing were generated to minimize clock skew.
+Clock buffers and clock routing were inserted to reduce clock skew and distribute the clock network efficiently.
 
-📸 **Screenshot:** CTS log snippet
+**Evidence:** Refer to **`Phase-4/files/`** for CTS reports, clock tree visualizations, and CTS logs.
 
 ---
 
 ## Routing
 
-Global and detailed routing completed successfully.
+Global routing and detailed routing completed successfully, producing a fully connected physical design.
 
-📸 **Screenshot:** Routing completion
+**Evidence:** Refer to **`Phase-4/files/`** for routing reports, routing visualizations, congestion maps, IR drop analysis, and DRC reports.
 
 ---
 
 ## Final GDS Generation
 
-The final GDS layout was generated successfully.
+The complete RTL-to-GDS flow successfully generated the final GDS layout.
 
-Output file
+**Generated Output**
 
 ```text
 results/sky130hd/gcd/base/6_final.gds
 ```
 
-The generated GDS was verified by opening it using **KLayout 0.30.9**.
+The generated GDS was verified by opening it in **KLayout 0.30.9**.
 
-📸 **Screenshot:** Final GDS opened in KLayout
+**Evidence:** Refer to **`Phase-4/files/`** for the final GDS layout, finish report, and layout verification.
 
 ---
 
-## Timing Report
+## Timing Analysis
 
-Timing analysis completed successfully.
+Static Timing Analysis (STA) was completed after routing.
 
-Include screenshots showing:
+The generated reports include:
 
-- WNS
-- TNS
+- Worst Negative Slack (WNS)
+- Total Negative Slack (TNS)
 
-📸 **Screenshot:** Final timing report
+**Evidence:** Refer to **`Phase-4/files/`** for the final timing reports and STA outputs.
 
 ---
 
 # Local Flow Summary
 
 | Parameter | Result |
-|------------|---------|
+|-----------|--------|
 | Design | GCD |
 | Technology | SKY130HD |
 | RTL Synthesis | ✅ Completed |
 | Floorplanning | ✅ Completed |
 | Placement | ✅ Completed |
-| CTS | ✅ Completed |
+| Clock Tree Synthesis | ✅ Completed |
 | Routing | ✅ Completed |
+| Timing Analysis | ✅ Completed |
 | Final GDS | ✅ Generated |
-| GDS Verified | ✅ Opened in KLayout |
+| GDS Verification | ✅ Opened Successfully in KLayout |
 | Runtime | ~60 seconds |
 
 ---
@@ -135,14 +134,14 @@ Include screenshots showing:
 
 | Metric | Cloud | Local |
 |----------|--------|--------|
-| Runtime | __________ | ~60 s |
-| WNS | __________ | __________ |
-| TNS | __________ | __________ |
+| Runtime | ________ | ~60 s |
+| WNS | ________ | ________ |
+| TNS | ________ | ________ |
 | GDS Generated | Yes | Yes |
 
-### Comparison
+## Comparison
 
-The local execution successfully reproduced the same RTL-to-GDS flow executed in GitHub Codespaces. Both environments generated the final GDS successfully. Minor differences in runtime and timing values may occur because of differences in CPU performance, memory allocation, and execution environment between the cloud container and the local virtual machine.
+The local execution successfully reproduced the complete RTL-to-GDS flow previously executed in GitHub Codespaces. Both environments generated the final GDS successfully. Minor differences in runtime or timing values may occur due to differences in processor performance, available system resources, and execution environments.
 
 ---
 
@@ -158,7 +157,7 @@ eqy: no such file or directory
 
 **Reason**
 
-The OSS CAD Suite binaries were not added to the system PATH.
+The OSS CAD Suite binaries were not included in the system PATH.
 
 **Solution**
 
@@ -178,7 +177,7 @@ KLayout not found in PATH
 
 **Reason**
 
-KLayout was not installed in the local environment.
+KLayout was not installed in the local Ubuntu environment.
 
 **Solution**
 
@@ -188,19 +187,19 @@ sudo apt install klayout
 
 ---
 
-## Error 3 – Ubuntu KLayout Crash
+## Error 3 – KLayout 0.26.2 Crash During GDS Merge
 
 **Issue**
 
-KLayout version 0.26.2 crashed during the GDS merge stage.
+The Ubuntu repository version of KLayout (0.26.2) crashed during the GDS merge stage.
 
 **Reason**
 
-The Ubuntu repository version was incompatible with the ORFS flow.
+The older KLayout version was incompatible with the ORFS flow.
 
 **Solution**
 
-Installed the same KLayout version (0.30.9) used by the ORFS Dockerfile.
+Installed KLayout 0.30.9, the same version used in the ORFS Dockerfile.
 
 ```bash
 curl -L -o /tmp/klayout.deb \
@@ -213,4 +212,4 @@ sudo apt install /tmp/klayout.deb
 
 # Outcome
 
-The complete RTL-to-GDS flow was successfully executed on the local Ubuntu 22.04 environment. All major implementation stages, including synthesis, floorplanning, placement, CTS, routing, timing analysis, and GDS generation, completed successfully. The generated **6_final.gds** was verified by opening it in **KLayout 0.30.9**, confirming that the local ORFS environment matched the GitHub Codespaces execution.
+The complete RTL-to-GDS flow was successfully executed on the local Ubuntu 22.04 environment. All implementation stages—including synthesis, floorplanning, placement, clock tree synthesis, routing, timing analysis, and GDS generation—completed successfully. The generated `6_final.gds` was verified in KLayout 0.30.9, demonstrating that the local ORFS environment successfully reproduced the cloud execution.
