@@ -2,113 +2,85 @@
 
 ## Objective
 
-The objective of this phase was to demonstrate familiarity with essential Linux commands, environment variables, and debugging techniques used while setting up and executing the OpenROAD Flow Scripts (ORFS) locally. During the installation and RTL-to-GDS execution, several Unix commands were used to inspect files, navigate directories, search logs, verify environment variables, and troubleshoot toolchain issues.
+The objective of this phase was to demonstrate proficiency with essential Unix/Linux commands and debugging techniques used while installing and executing the OpenROAD Flow Scripts (ORFS). These commands were used extensively throughout the local setup and RTL-to-GDS execution to inspect files, configure the environment, and troubleshoot toolchain issues.
 
 ---
 
 # Unix Commands Used
 
-| Command | Purpose | Example Used |
-|---------|---------|--------------|
-| `pwd` | Display the current working directory | `pwd` |
-| `ls` | List files and directories | `ls -la` |
-| `cd` | Change directories | `cd orfs/flow` |
-| `grep` | Search for specific text inside files | `grep -n "YOSYS_EXE" scripts/variables.mk` |
-| `find` | Locate files and directories | `find . -name "install-openroad.sh"` |
-| `cat` | Display file contents | `cat .devcontainer/install-openroad.sh` |
-| `less` | View large files page by page | `less .devcontainer/Dockerfile` |
-| `echo` | Display environment variable values | `echo $PATH` |
-| `export` | Set environment variables | `export PATH=/opt/oss-cad-suite/bin:$PATH` |
+| Command | Purpose | Evidence |
+|---------|---------|----------|
+| `pwd` | Display the current working directory | `files/pwd_ls_cd.png` |
+| `ls` | List files and directories | `files/pwd_ls_cd.png` |
+| `cd` | Navigate between directories | `files/pwd_ls_cd.png` |
+| `find` | Locate files and directories | `files/find_files.png` |
+| `grep` | Search text inside files and logs | `files/grep_makefile.png`, `files/log_search.png` |
+| `cat` | Display file contents | `files/cat_install_openroad.png` |
+| `less` | Inspect large configuration files | `files/less_dockerfile.png` |
+| `echo` | Display environment variables | `files/environment_variables.png` |
+| `export` | Configure environment variables | `files/environment_variables.png` |
+| `which` | Locate installed executables | `files/tool_locations.png` |
 
 ---
 
 # Debugging Activities
 
-## Directory Navigation
+## 1. Directory Navigation
 
-Linux navigation commands were used extensively while switching between the repository root, ORFS flow directory, and tool installation locations.
+Commands such as `pwd`, `ls`, and `cd` were used to navigate between the repository root, ORFS flow directory, and output folders while executing and debugging the flow.
 
-**Evidence:** Refer to **`Phase-5/files/`** for terminal screenshots.
-
----
-
-## Searching Files
-
-The `find` command was used to locate installation scripts, binaries, and required files.
-
-Example:
-
-```bash
-find . -name "install-openroad.sh"
-```
-
-**Evidence:** Refer to **`Phase-5/files/`**.
+**Evidence:** `files/pwd_ls_cd.png`
 
 ---
 
-## Inspecting Makefiles
+## 2. Searching Repository Files
 
-The `grep` command was used to inspect ORFS Makefiles and identify tool paths.
+The `find` command was used to locate important scripts and configuration files, including the OpenROAD installation script, Dockerfile, and Makefile variables.
 
-Example:
-
-```bash
-grep -n "YOSYS_EXE" scripts/variables.mk
-```
-
-This helped identify which Yosys executable was being used during synthesis.
-
-**Evidence:** Refer to **`Phase-5/files/`**.
+**Evidence:** `files/find_files.png`
 
 ---
 
-## Viewing Configuration Files
+## 3. Inspecting Makefiles
 
-Configuration files and installation scripts were examined using `cat` and `less`.
+The `grep` command was used to inspect `variables.mk` and identify the paths configured for OpenROAD and Yosys executables.
 
-Examples
-
-```bash
-cat .devcontainer/install-openroad.sh
-```
-
-```bash
-less .devcontainer/Dockerfile
-```
-
-These files were used to understand the ORFS toolchain and identify the correct versions of OpenROAD, Yosys, and KLayout.
-
-**Evidence:** Refer to **`Phase-5/files/`**.
+**Evidence:** `files/grep_makefile.png`
 
 ---
 
-## Environment Variables
+## 4. Viewing Configuration Files
 
-The `export` command was used to configure the OSS CAD Suite binaries.
+The OpenROAD installation script and Dockerfile were inspected using `cat` and `less` to understand the toolchain setup and installed software versions.
 
-```bash
-export PATH=/opt/oss-cad-suite/bin:$PATH
-```
+**Evidence:**
 
-The PATH variable was verified using
-
-```bash
-echo $PATH
-```
-
-This ensured that the required executables were accessible during RTL-to-GDS execution.
-
-**Evidence:** Refer to **`Phase-5/files/`**.
+- `files/cat_install_openroad.png`
+- `files/less_dockerfile.png`
 
 ---
 
-## Log Inspection
+## 5. Environment Variables
 
-Execution logs were inspected to identify synthesis, placement, CTS, and routing errors during debugging.
+The `export` command was used to add the OSS CAD Suite binaries to the system `PATH`, while `echo` verified the updated environment variables.
 
-Linux commands such as `grep`, `cat`, and `less` were used to efficiently search large log files.
+**Evidence:** `files/environment_variables.png`
 
-**Evidence:** Refer to **`Phase-5/files/`**.
+---
+
+## 6. Log Inspection
+
+Execution logs were searched using `grep` to inspect Clock Tree Synthesis (CTS) information and verify successful execution of different stages of the RTL-to-GDS flow.
+
+**Evidence:** `files/log_search.png`
+
+---
+
+## 7. Tool Verification
+
+The `which` command was used to verify the locations of the installed OpenROAD and Yosys executables.
+
+**Evidence:** `files/tool_locations.png`
 
 ---
 
@@ -116,15 +88,16 @@ Linux commands such as `grep`, `cat`, and `less` were used to efficiently search
 
 - Linux terminal navigation
 - File and directory management
-- Searching configuration files
-- Inspecting Makefiles
+- Searching files using `find`
+- Inspecting Makefiles using `grep`
+- Reading configuration files using `cat` and `less`
 - Environment variable configuration
-- Toolchain debugging
+- Toolchain verification
 - Log file analysis
-- ORFS troubleshooting
+- ORFS debugging and troubleshooting
 
 ---
 
 # Outcome
 
-This phase strengthened practical Linux and debugging skills required for ASIC implementation workflows. By using Unix commands to inspect files, configure the environment, and resolve toolchain issues, the ORFS flow was successfully executed on the local Ubuntu environment.
+This phase improved practical Unix/Linux proficiency and debugging skills required for ASIC implementation workflows. Using standard Linux utilities, the ORFS environment was successfully configured, verified, and debugged, enabling successful execution of the complete RTL-to-GDS flow on a local Ubuntu environment.
