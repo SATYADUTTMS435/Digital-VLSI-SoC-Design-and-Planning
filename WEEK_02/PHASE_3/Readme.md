@@ -88,7 +88,8 @@ export PATH=/opt/oss-cad-suite/bin:$PATH
 
 Environment validation ensured that OpenROAD, Yosys and supporting utilities were accessible during execution.
 
-<img width="1373" height="865" alt="Screenshot 2026-07-21 114015" src="https://github.com/user-attachments/assets/fcc5de12-6586-4025-9e55-37ac9ac8b42e" />
+<img width="793" height="211" alt="Screenshot 2026-07-21 113742" src="https://github.com/user-attachments/assets/5743a3d7-a4d9-4282-a2b7-a748b05b162c" />
+
 
 
 ---
