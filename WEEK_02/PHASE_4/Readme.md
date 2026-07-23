@@ -132,16 +132,16 @@ The generated reports include:
 
 # Cloud vs Local Comparison
 
-| Metric | Cloud | Local |
-|----------|--------|--------|
-| Runtime | ________ | ~60 s |
-| WNS | ________ | ________ |
-| TNS | ________ | ________ |
+| Metric | Cloud (GitHub Codespaces) | Local (Ubuntu 22.04 VM) |
+|---------|---------------------------|--------------------------|
+| Runtime | ~57 s | ~60 s |
+| WNS | Not Generated |  |
+| TNS | Not Generated |  |
 | GDS Generated | Yes | Yes |
 
 ## Comparison
 
-The local execution successfully reproduced the complete RTL-to-GDS flow previously executed in GitHub Codespaces. Both environments generated the final GDS successfully. Minor differences in runtime or timing values may occur due to differences in processor performance, available system resources, and execution environments.
+The RTL-to-GDS flow completed successfully in both the GitHub Codespaces and local Ubuntu 22.04 environments, generating the final GDS in each case. During the cloud execution, the timing report (WNS/TNS) was not generated, while the local execution completed timing analysis successfully. The slight increase in local runtime is expected due to differences in hardware resources and execution environments between GitHub Codespaces and the local virtual machine.
 
 ---
 
