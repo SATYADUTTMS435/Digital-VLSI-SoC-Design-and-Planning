@@ -318,6 +318,73 @@ sudo apt install /tmp/klayout.deb
 
 ---
 
+## Error 10 – curl Not Installed
+
+**Issue**
+
+```
+curl: command not found
+```
+
+**Reason**
+
+The minimal Ubuntu installation did not include the `curl` utility.
+
+**Solution**
+
+```bash
+sudo apt update
+sudo apt install -y curl
+```
+
+This allowed downloading the official KLayout package.
+
+---
+
+## Error 11 – Incorrect Command Usage
+
+**Issue**
+
+```
+dpkg: unknown option -1
+```
+
+**Reason**
+
+The option `-l` (lowercase L) was mistakenly entered as `-1` (number one).
+
+**Solution**
+
+Used the correct command.
+
+```bash
+dpkg -l | grep -i klayout
+```
+
+---
+
+## Error 12 – Incorrect Repository Path
+
+**Issue**
+
+```
+.devcontainer/Dockerfile: No such file or directory
+```
+
+**Reason**
+
+The command was executed from the `orfs/flow` directory instead of the repository root.
+
+**Solution**
+
+Returned to the repository root and executed the command again.
+
+```bash
+cd ~/Desktop/vsd-scl180-orfs
+```
+
+---
+
 # Outcome
 
 The complete ORFS toolchain was successfully configured on Ubuntu 22.04. After resolving all dependency, compatibility and installation issues, the local environment matched the GitHub Codespaces development environment and was ready for executing the RTL-to-GDS flow.
