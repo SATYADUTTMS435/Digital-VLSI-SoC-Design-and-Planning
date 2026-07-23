@@ -1,0 +1,15 @@
+OpenROAD v2.0-28075-g0f99689f45 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/satyadutt_ms/Desktop/vsd-scl180-orfs/orfs/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /home/satyadutt_ms/Desktop/vsd-scl180-orfs/orfs/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /home/satyadutt_ms/Desktop/vsd-scl180-orfs/orfs/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design gcd
+source /home/satyadutt_ms/Desktop/vsd-scl180-orfs/orfs/flow/platforms/sky130hd/setRC.tcl
+write_db ./results/sky130hd/gcd/base/1_synth.odb
+write_sdc -no_timestamp ./results/sky130hd/gcd/base/1_synth.sdc
+Elapsed time: 0:00.58[h:]min:sec. CPU time: user 0.39 sys 0.15 (93%). Peak memory: 112960KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            0            110 e9046230dc27e9987ea3

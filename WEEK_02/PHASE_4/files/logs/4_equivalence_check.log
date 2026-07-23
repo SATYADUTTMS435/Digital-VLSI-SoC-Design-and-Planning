@@ -1,0 +1,1171 @@
+EQY 12:34:33 [./logs/sky130hd/gcd/base/4_eqy_output] read_gold: starting process "yosys -ql ./logs/sky130hd/gcd/base/4_eqy_output/gold.log ./logs/sky130hd/gcd/base/4_eqy_output/gold.ys"
+EQY 12:34:33 [./logs/sky130hd/gcd/base/4_eqy_output] read_gold: finished (returncode=0)
+EQY 12:34:33 [./logs/sky130hd/gcd/base/4_eqy_output] read_gate: starting process "yosys -ql ./logs/sky130hd/gcd/base/4_eqy_output/gate.log ./logs/sky130hd/gcd/base/4_eqy_output/gate.ys"
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] read_gate: finished (returncode=0)
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] combine: starting process "yosys -ql ./logs/sky130hd/gcd/base/4_eqy_output/combine.log ./logs/sky130hd/gcd/base/4_eqy_output/combine.ys"
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] combine: finished (returncode=0)
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] Warning: Cannot find entity wire*.
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] partition: starting process "cd ./logs/sky130hd/gcd/base/4_eqy_output; yosys -ql partition.log partition.ys"
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] partition: finished (returncode=0)
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: starting process "make -j4 -C ./logs/sky130hd/gcd/base/4_eqy_output -f strategies.mk"
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_0_clk.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_0_clk.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_0__f_clk.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_0__f_clk.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_0_clk.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_1__f_clk.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_0_clk.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_1__f_clk.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_0__f_clk.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_0__f_clk.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_2__f_clk.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_2__f_clk.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_1__f_clk.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_1__f_clk.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_3__f_clk.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_2__f_clk.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkbuf_2_3__f_clk.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkload0.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_2__f_clk.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkload0.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_3__f_clk.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkload0.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkbuf_2_3__f_clk.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkload1.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkload1.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkload2.A'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkload0.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clkload2.X'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkload2.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clknet_0_clk'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkload1.A' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkload1.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clknet_2_0__leaf_clk'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clknet_2_1__leaf_clk'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clkload2.X' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clknet_2_2__leaf_clk'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clknet_0_clk' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.clknet_2_3__leaf_clk'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clknet_2_0__leaf_clk' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clknet_2_1__leaf_clk' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.0_DFF_P_.CLK'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.0_DFF_P_.D'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clknet_2_2__leaf_clk' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.0_DFF_P_.IQ'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.0_DFF_P_.CLK' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.clknet_2_3__leaf_clk' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.0_DFF_P_.Q'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.0_DFF_P_.D' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.1'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.1_DFF_P_.CLK'..
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.0_DFF_P_.IQ' using strategy 'basic'
+EQY 12:34:34 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.1_DFF_P_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.1_DFF_P_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.0_DFF_P_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.1_DFF_P_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.1' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.1_DFF_P_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.2'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.1_DFF_P_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.2_DFF_P_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.1_DFF_P_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.1_DFF_P_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.2_DFF_P_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.2_DFF_P_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.2' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrl.state.out.2_DFF_P_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.2_DFF_P_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrla_reg_en.0'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.2_DFF_P_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.ctrlb_reg_en.0'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.2_DFF_P_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.0'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrl.state.out.2_DFF_P_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.1'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrla_reg_en.0' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.10'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.ctrlb_reg_en.0' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.11'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.0' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.12'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.1' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.13'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.10' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.14'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.11' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.15'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.12' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.13' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.2'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.3'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.15' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.14' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.4'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.5'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.3' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.2' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.6'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.7'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.4' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.8'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.5' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin0.9'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.7' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.0'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.6' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.1'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.8' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.10'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin0.9' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.11'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.0' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.12'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.1' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.13'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.10' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.11' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.14'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.15'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.12' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.2'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.13' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.3'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.15' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.4'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.14' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.5'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.2' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.6'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.3' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.7'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.4' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.8'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.5' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_lt_bin1.9'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.6' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.7' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.0'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.1'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.8' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.10'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_lt_bin1.9' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.11'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.0' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.1' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.12'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.13'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.10' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.14'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.11' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.15'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.13' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.2'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.12' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.3'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.15' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.4'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.14' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.5'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.2' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.6'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.3' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.7'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.5' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.4' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.8'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_muxout.9'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.6' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.7' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.0_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.0_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.9' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_muxout.8' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.0_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.0_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.0_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.0_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.0_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.0_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.10_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.10_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.0_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.10_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.10_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.10_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.10_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.10_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.0_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.11_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.10_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.11_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.10_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.11_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.11_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.11_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.10_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.11_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.11_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.12_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.11_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.12_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.11_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.12_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.12_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.12_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.12_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.12_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.12_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.13_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.11_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.13_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.13_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.12_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.13_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.13_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.13_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.13_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.13_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.12_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.14_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.14_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.13_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.14_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.14_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.14_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.14_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.14_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.14_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.15_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.13_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.15_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.14_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.15_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.15_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.15_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.14_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.15_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.15_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.1_DFFE_PP_.CLK'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.15_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.1_DFFE_PP_.D'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.15_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.1_DFFE_PP_.DE'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.1_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.1_DFFE_PP_.IQ'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.1_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.1_DFFE_PP_.Q'..
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.15_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:35 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.2_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.1_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.2_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.1_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.2_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.2_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.2_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.2_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.2_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.1_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.3_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.2_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.3_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.2_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.3_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.3_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.3_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.3_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.3_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.2_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.4_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.3_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.4_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.3_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.4_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.4_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.4_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.3_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.4_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.4_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.5_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.4_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.5_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.4_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.5_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.4_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.5_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.5_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.5_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.5_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.6_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.5_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.6_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.6_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.6_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.5_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.6_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.6_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.6_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.6_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.7_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.5_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.7_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.6_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.7_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.7_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.7_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.7_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.7_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.6_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.8_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.7_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.8_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.7_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.8_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.8_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.8_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.7_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.8_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.8_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.9_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.8_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.9_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.8_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.9_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.9_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.9_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.9_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.a_reg.out.9_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.9_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.0'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.8_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.1'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.9_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.10'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.0' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.11'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.1' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.12'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.10' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.13'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.a_reg.out.9_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.14'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.12' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.11' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.15'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.2'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.13' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.3'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.14' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.4'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.15' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.5'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.2' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.6'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.3' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.7'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.4' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.8'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.5' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.6' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_muxout.9'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.0_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.7' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.0_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.9' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_muxout.8' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.0_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.0_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.0_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.0_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.0_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.10_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.0_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.10_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.0_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.10_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.10_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.10_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.10_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.10_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.10_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.11_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.10_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.11_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.10_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.11_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.0_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.11_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.11_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.11_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.11_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.11_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.12_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.12_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.11_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.11_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.12_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.12_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.12_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.12_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.12_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.13_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.12_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.12_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.13_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.13_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.12_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.13_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.13_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.13_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.13_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.13_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.14_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.14_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.13_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.13_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.14_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.14_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.14_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.14_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.14_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.15_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.14_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.15_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.14_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.15_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.14_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.15_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.15_DFFE_PP_.IQ'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.15_DFFE_PP_.Q'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.15_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.15_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.1_DFFE_PP_.CLK'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.1_DFFE_PP_.D'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.15_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.1_DFFE_PP_.DE'..
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.15_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:36 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.1_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.1_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.1_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.1_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.2_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.1_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.2_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.1_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.2_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.1_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.2_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.2_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.2_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.2_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.2_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.3_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.3_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.2_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.3_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.2_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.3_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.3_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.3_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.3_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.4_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.3_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.4_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.3_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.4_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.3_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.4_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.4_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.4_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.4_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.5_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.4_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.5_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.4_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.5_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.4_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.5_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.5_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.5_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.5_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.6_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.5_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.6_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.5_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.6_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.6_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.5_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.6_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.6_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.6_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.7_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.6_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.7_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.6_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.7_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.6_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.7_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.7_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.7_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.7_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.8_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.7_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.8_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.7_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.8_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.7_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.8_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.8_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.8_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.8_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.9_DFFE_PP_.CLK'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.8_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.9_DFFE_PP_.D'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.8_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.9_DFFE_PP_.DE'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.8_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.9_DFFE_PP_.CLK' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.9_DFFE_PP_.Q'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.dpath.b_reg.out.9_DFFE_PP_.IQ'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.9_DFFE_PP_.D' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input1.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.9_DFFE_PP_.DE' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input1.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.9_DFFE_PP_.Q' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input10.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.dpath.b_reg.out.9_DFFE_PP_.IQ' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input10.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input1.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input11.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input1.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input10.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input10.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input11.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input12.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input12.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input11.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input13.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input12.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input13.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input11.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input12.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input14.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input14.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input13.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input15.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input13.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input15.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input14.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input14.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input16.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input16.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input15.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input17.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input15.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input16.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input17.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input16.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input18.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input18.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input17.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input19.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input17.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input18.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input2.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input19.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input18.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input2.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input19.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input20.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input19.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input2.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input20.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input21.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input2.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input21.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input20.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input22.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input20.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input21.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input22.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input21.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input23.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input23.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input22.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input24.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input23.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input22.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input25.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input24.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input23.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input25.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input24.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input26.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input24.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input25.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input25.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input26.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input27.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input27.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input26.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input28.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input26.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input28.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input27.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input27.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input29.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input29.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input28.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input3.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input28.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input29.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input3.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input30.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input29.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input30.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input3.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input31.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input3.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input31.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input30.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input30.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input32.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input32.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input31.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input33.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input31.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input33.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input32.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input32.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input34.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input34.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input33.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input35.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input34.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input33.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input35.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input4.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input34.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input4.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input35.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input5.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input35.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input4.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input5.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input4.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input6.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input6.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input5.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input7.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input5.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input6.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input6.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input7.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input8.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input8.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input7.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input9.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input8.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.input9.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input8.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input7.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output36.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output36.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input9.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.input9.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output37.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output36.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output37.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output38.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output36.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output38.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output38.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output37.A' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output37.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output39.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output39.X'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output40.A'..
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output39.X' using strategy 'basic'
+EQY 12:34:37 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output40.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output38.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output41.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output40.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output41.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output39.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output42.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output40.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output42.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output41.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output43.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output42.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output43.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output41.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output44.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output43.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output44.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output44.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output45.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output42.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output44.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output46.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output45.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output43.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output46.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output45.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output47.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output45.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output47.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output46.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output48.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output46.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output48.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output47.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output49.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output47.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output49.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output48.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output50.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output48.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output50.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output49.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output51.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output49.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output50.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output51.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output52.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output50.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output52.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output51.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output53.A'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output51.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.output53.X'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output52.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.req_rdy'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output52.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.0'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output53.A' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.output53.X' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.1'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.10'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.req_rdy' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.11'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.0' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.12'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.1' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.10' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.13'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.14'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.11' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.15'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.12' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.2'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.13' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.14' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.3'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.4'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.15' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.5'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.2' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.6'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.4' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.3' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.7'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.8'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.5' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_msg.9'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.6' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Running strategy 'basic' on 'gcd.resp_val'..
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.8' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.7' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_msg.9' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: Proved equivalence of partition 'gcd.resp_val' using strategy 'basic'
+EQY 12:34:38 [./logs/sky130hd/gcd/base/4_eqy_output] run: make -f strategies.mk summary
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] run: finished (returncode=0)
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_val
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.15
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.14
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.13
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.12
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.11
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.10
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.9
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.8
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.7
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.6
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.5
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.4
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.3
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.2
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.1
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.resp_msg.0
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.req_rdy
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output53.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output53.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output52.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output52.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output51.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output51.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output50.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output50.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output49.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output49.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output48.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output48.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output47.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output47.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output46.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output46.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output45.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output45.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output44.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output44.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output43.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output43.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output42.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output42.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output41.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output41.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output40.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output40.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output39.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output39.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output38.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output38.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output37.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output37.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output36.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.output36.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input9.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input9.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input8.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input8.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input7.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input7.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input6.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input6.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input5.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input5.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input4.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input4.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input35.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input35.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input34.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input34.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input33.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input33.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input32.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input32.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input31.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input31.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input30.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input30.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input3.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input3.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input29.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input29.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input28.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input28.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input27.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input27.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input26.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input26.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input25.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input25.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input24.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input24.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input23.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input23.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input22.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input22.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input21.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input21.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input20.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input20.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input2.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input2.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input19.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input19.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input18.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input18.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input17.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input17.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input16.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input16.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input15.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input15.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input14.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input14.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input13.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input13.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input12.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input12.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input11.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input11.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input10.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input10.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input1.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.input1.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.9_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.9_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.9_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.9_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.9_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.8_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.8_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.8_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.8_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.8_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.7_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.7_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.7_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.7_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.7_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.6_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.6_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.6_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.6_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.6_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.5_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.5_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.5_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.5_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.5_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.4_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.4_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.4_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.4_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.4_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.3_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.3_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.3_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.3_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.3_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.2_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.2_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.2_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.2_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.2_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.1_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.1_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.1_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.1_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.1_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.15_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.15_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.15_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.15_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.15_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.14_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.14_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.14_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.14_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.14_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.13_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.13_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.13_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.13_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.13_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.12_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.12_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.12_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.12_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.12_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.11_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.11_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.11_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.11_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.11_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.10_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.10_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.10_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.10_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.10_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.0_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.0_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.0_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.0_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_reg.out.0_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.9
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.8
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.7
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.6
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.5
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.4
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.3
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.2
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.1
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.15
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.14
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.13
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.12
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.11
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.10
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.b_muxout.0
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.9_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.9_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.9_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.9_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.9_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.8_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.8_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.8_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.8_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.8_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.7_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.7_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.7_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.7_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.7_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.6_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.6_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.6_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.6_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.6_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.5_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.5_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.5_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.5_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.5_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.4_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.4_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.4_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.4_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.4_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.3_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.3_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.3_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.3_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.3_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.2_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.2_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.2_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.2_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.2_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.1_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.1_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.1_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.1_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.1_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.15_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.15_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.15_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.15_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.15_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.14_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.14_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.14_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.14_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.14_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.13_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.13_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.13_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.13_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.13_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.12_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.12_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.12_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.12_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.12_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.11_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.11_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.11_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.11_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.11_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.10_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.10_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.10_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.10_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.10_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.0_DFFE_PP_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.0_DFFE_PP_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.0_DFFE_PP_.DE
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.0_DFFE_PP_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_reg.out.0_DFFE_PP_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.9
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.8
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.7
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.6
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.5
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.4
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.3
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.2
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.1
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.15
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.14
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.13
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.12
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.11
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.10
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_muxout.0
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.9
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.8
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.7
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.6
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.5
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.4
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.3
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.2
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.1
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.15
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.14
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.13
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.12
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.11
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.10
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin1.0
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.9
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.8
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.7
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.6
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.5
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.4
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.3
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.2
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.1
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.15
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.14
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.13
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.12
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.11
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.10
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.dpath.a_lt_bin0.0
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.2_DFF_P_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.2_DFF_P_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.2_DFF_P_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.2_DFF_P_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.2
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.1_DFF_P_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.1_DFF_P_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.1_DFF_P_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.1_DFF_P_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.1
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.0_DFF_P_.Q
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.0_DFF_P_.IQ
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.0_DFF_P_.D
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrl.state.out.0_DFF_P_.CLK
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrlb_reg_en.0
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.ctrla_reg_en.0
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clknet_2_3__leaf_clk
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clknet_2_2__leaf_clk
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clknet_2_1__leaf_clk
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clknet_2_0__leaf_clk
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clknet_0_clk
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkload2.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkload2.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkload1.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkload1.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkload0.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkload0.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_3__f_clk.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_3__f_clk.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_2__f_clk.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_2__f_clk.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_1__f_clk.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_1__f_clk.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_0__f_clk.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_2_0__f_clk.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_0_clk.X
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved equivalence of partition gcd.clkbuf_0_clk.A
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] Successfully proved designs equivalent
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:05 (5)
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:15 (15)
+EQY 12:34:39 [./logs/sky130hd/gcd/base/4_eqy_output] DONE (PASS, rc=0)

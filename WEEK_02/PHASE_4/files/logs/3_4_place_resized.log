@@ -1,0 +1,70 @@
+OpenROAD v2.0-28075-g0f99689f45 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/satyadutt_ms/Desktop/vsd-scl180-orfs/orfs/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/gcd/base/3_3_place_gp.odb
+source /home/satyadutt_ms/Desktop/vsd-scl180-orfs/orfs/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       401
+       10 |     +0.0% |       0 |       0 |             0 |       391
+       20 |     +0.0% |       0 |       0 |             0 |       381
+       30 |     +0.0% |       0 |       0 |             0 |       371
+       40 |     +0.0% |       0 |       0 |             0 |       361
+       50 |     +0.0% |       0 |       0 |             0 |       351
+       60 |     +0.0% |       0 |       0 |             0 |       341
+       70 |     +0.0% |       0 |       0 |             0 |       331
+       80 |     +0.0% |       0 |       0 |             0 |       321
+       90 |     +0.0% |       0 |       0 |             0 |       311
+      100 |     +0.0% |       0 |       0 |             0 |       301
+      110 |     +0.0% |       0 |       0 |             0 |       291
+      120 |     +0.0% |       0 |       0 |             0 |       281
+      130 |     +0.0% |       0 |       0 |             0 |       271
+      140 |     +0.0% |       0 |       0 |             0 |       261
+      150 |     +0.0% |       0 |       0 |             0 |       251
+      160 |     +0.0% |       0 |       0 |             0 |       241
+      170 |     +0.0% |       0 |       0 |             0 |       231
+      180 |     +0.0% |       0 |       0 |             0 |       221
+      190 |     +0.0% |       0 |       0 |             0 |       211
+      200 |     +0.0% |       0 |       0 |             0 |       201
+      210 |     +0.0% |       0 |       0 |             0 |       191
+      220 |     +0.0% |       0 |       0 |             0 |       181
+      230 |     +0.0% |       0 |       0 |             0 |       171
+      240 |     +0.0% |       0 |       0 |             0 |       161
+      250 |     +0.0% |       0 |       0 |             0 |       151
+      260 |     +0.0% |       0 |       0 |             0 |       141
+      270 |     +0.0% |       0 |       0 |             0 |       131
+      280 |     +0.0% |       0 |       0 |             0 |       121
+      290 |     +0.0% |       0 |       0 |             0 |       111
+      300 |     +0.0% |       0 |       0 |             0 |       101
+      310 |     +0.0% |       0 |       0 |             0 |        91
+      320 |     +0.0% |       0 |       0 |             0 |        81
+      330 |     +0.0% |       0 |       0 |             0 |        71
+      340 |     +0.0% |       0 |       0 |             0 |        61
+      350 |     +0.0% |       0 |       0 |             0 |        51
+      360 |     +0.0% |       0 |       0 |             0 |        41
+      370 |     +0.0% |       0 |       0 |             0 |        31
+      380 |     +0.0% |       0 |       0 |             0 |        21
+      390 |     +0.0% |       0 |       0 |             0 |        11
+      400 |     +0.0% |       0 |       0 |             0 |         1
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Floating nets: 
+[WARNING RSZ-0020] found 2 floating nets.
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 3518 um^2 62% utilization.
+Instance count before 437, after 437
+Pin count before 1101, after 1101
+write_db ./results/sky130hd/gcd/base/3_4_place_resized.odb
+Elapsed time: 0:00.72[h:]min:sec. CPU time: user 0.48 sys 0.25 (102%). Peak memory: 132872KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_4_place_resized                  0            129 36a71cb229ef2716229b
