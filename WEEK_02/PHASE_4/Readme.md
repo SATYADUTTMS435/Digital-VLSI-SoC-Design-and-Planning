@@ -145,6 +145,13 @@ The local execution successfully reproduced the complete RTL-to-GDS flow previou
 
 ---
 
+
+<img width="1485" height="856" alt="Screenshot 2026-07-22 140237" src="https://github.com/user-attachments/assets/1247d606-99eb-41ef-ac92-57b615d469f4" />
+
+
+<img width="1421" height="840" alt="Screenshot 2026-07-22 140403" src="https://github.com/user-attachments/assets/05febdfb-5b4f-4275-9c7d-641ddab5569e" />
+
+
 # Errors Encountered During Phase 4
 
 ## Error 1 – `eqy` Not Found
