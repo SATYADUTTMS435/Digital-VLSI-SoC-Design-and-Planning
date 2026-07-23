@@ -17,7 +17,8 @@ git clone https://github.com/vsdip/vsd-scl180-orfs.git
 cd vsd-scl180-orfs
 ```
 
-📸 **Screenshot:** ORFS repository cloned successfully.
+<img width="1457" height="882" alt="Screenshot 2026-07-21 102147" src="https://github.com/user-attachments/assets/04e6bd3a-0389-4048-9745-f2e42728d87a" />
+
 
 ---
 
@@ -39,7 +40,8 @@ git lfs pull
 
 This downloaded the actual binaries instead of Git LFS pointer files.
 
-📸 **Screenshot:** Git LFS installation and repository setup.
+<img width="945" height="642" alt="Screenshot 2026-07-21 103040" src="https://github.com/user-attachments/assets/a497bc5f-0119-4d36-bb4f-ac8182ae52b5" />
+
 
 ---
 
@@ -59,11 +61,12 @@ yosys -V
 make --version
 ```
 
-```bash
-which openroad
-```
+<img width="1325" height="263" alt="Screenshot 2026-07-21 114203" src="https://github.com/user-attachments/assets/448f9f53-a45a-4510-bff0-645adbebb87a" />
 
-📸 **Screenshot:** Local tool verification.
+
+<img width="956" height="846" alt="Screenshot 2026-07-22 123012" src="https://github.com/user-attachments/assets/506ce171-c321-426b-bc91-6ac19ffe5521" />
+
+
 
 ---
 
@@ -85,7 +88,8 @@ export PATH=/opt/oss-cad-suite/bin:$PATH
 
 Environment validation ensured that OpenROAD, Yosys and supporting utilities were accessible during execution.
 
-📸 **Screenshot:** Environment validation.
+<img width="1373" height="865" alt="Screenshot 2026-07-21 114015" src="https://github.com/user-attachments/assets/fcc5de12-6586-4025-9e55-37ac9ac8b42e" />
+
 
 ---
 
@@ -107,7 +111,7 @@ openroad -version
 
 The version output confirmed successful installation.
 
-📸 **Screenshot:** OpenROAD version after installation.
+<img width="1373" height="865" alt="Screenshot 2026-07-21 114015" src="https://github.com/user-attachments/assets/fece1cac-e66d-4284-8e60-13ae60e52e6e" />
 
 ---
 
